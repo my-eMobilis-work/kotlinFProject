@@ -1,0 +1,23 @@
+{% extends 'basePage.html' %}
+{% load static %}
+
+{% block body %}
+
+      <!---Upload image--->
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">Upload an Image</h2>
+            <form method="post" enctype="multipart/form-data" class="text-center d-block m-auto mb-4">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+                <button type="submit">Upload</button>
+                <div class="container text-center my-4">
+                <a href="{% url 'gallery' %}" class="btn btn-warning">Display all uploaded images</a>
+                </div>
+            </form>
+    </div>
+</div>
+
+
+{% endblock %}
