@@ -16,5 +16,122 @@
         </div>
     </div>
 
+    <div class="container-xxl mx-3">
+    <div class="container mx-0 my-4">
+        <div class="d-flex align-items-center">
+            <i class="fa fa-3x fa-camera-retro text-primary mb-4"></i>
+            <h2 class="text-center text-primary ms-3">Share Your Experience</h2>
+        </div>
+        <p class="mb-5">At Twiga Resort, we invite you to capture the beauty of your stay. Share your
+            stunning photos with us and let the world see the magic of Twiga Resort. Your photos might even be featured
+            in our gallery!</p>
+    </div>
+    <div class="gallery_upload_container">
+        <h2>Upload an image</h2>
+
+        <form method="post" enctype="multipart/form-data" class="text-center d-block m-auto mb-4">
+            {% csrf_token %}
+
+            <button class="btn btn-custom" type="submit">Upload</button>
+        </form>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container mx-0 my-4">
+            <div class="d-flex align-items-center">
+                <i class="fa fa-3x fa-images text-primary mb-4"></i>
+                <h2 class="text-primary ms-3">Twiga Gallery</h2>
+            </div>
+            <p>Explore the beauty of Twiga Resort through our gallery! We encourage you to capture your moments and
+                share the magic of your stay with us. Discover some of the amazing pictures taken by our guests and our
+                team
+                right here.
+            </p>
+        </div>
+
+
+        <!-- Row for the image grid with gallery class -->
+        <div class="row gallery g-4">
+            <!-- Column for the first image -->
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g0.jpg' %}" alt="Gallery Image 1">
+                </div>
+            </div>
+
+            <!-- Column for the second image -->
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g1.jpg' %}" alt="Gallery Image 2">
+                </div>
+            </div>
+
+            <!-- Column for the third image -->
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g2.jpg' %}" alt="Gallery Image 3">
+                </div>
+            </div>
+
+            <!-- Repeat the above block for the rest of the images -->
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g3.jpg' %}" alt="Gallery Image 4">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g4.jpg' %}" alt="Gallery Image 5">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g5.jpg' %}" alt="Gallery Image 6">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g6.jpg' %}" alt="Gallery Image 7">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g7.jpg' %}" alt="Gallery Image 8">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g8.jpg' %}" alt="Gallery Image 9">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g9.jpg' %}" alt="Gallery Image 10">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g10.jpg' %}" alt="Gallery Image 11">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="{% static 'assets/img/gallery/g11.jpg' %}" alt="Gallery Image 12">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
 
 {% endblock %}

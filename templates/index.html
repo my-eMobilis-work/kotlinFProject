@@ -14,7 +14,7 @@
                             seafood to gourmet delicacies, while surrounded by the stunning beauty of nature.<br>Savor
                             unforgettable meals with stunning views.</p>
                         <p class="text-white animated slideInLeft mb-4 pb-2">Your perfect escape awaits!</p>
-                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                        <a href="{% url 'bookings' %}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                         <img class="img-fluid" src="{% static 'assets/img/hero.png' %}" alt="">
@@ -81,19 +81,19 @@
                     <div class="row g-3">
                         <div class="col-6 text-start">
                             <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
-                                 src="{% static 'assets/img/about/about_1.jpg' %}" alt="about-image one">
+                                 src="{% static 'assets/img/about/a1.jpg' %}" alt="about-image one">
                         </div>
                         <div class="col-6 text-start d-flex align-items-end">
                             <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.2s"
-                                 src="{% static 'assets/img/about/about_2.jpg' %}" alt="about-image two">
+                                 src="{% static 'assets/img/about/a2.jpg' %}" alt="about-image two">
                         </div>
                         <div class="col-6 text-end">
                             <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
-                                 src="{% static 'assets/img/about/about_3.jpg' %}" alt="about-image three">
+                                 src="{% static 'assets/img/about/a3.jpg' %}" alt="about-image three">
                         </div>
                         <div class="col-6 text-end">
                             <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.4s"
-                                 src="{% static 'assets/img/about/about_4.jpg' %}" alt="about-image four">
+                                 src="{% static 'assets/img/about/a4.jpg' %}" alt="about-image four">
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn_custom btn-primary py-3 px-5 mt-2" href="{% url 'about' %}">Read More</a>
                 </div>
             </div>
         </div>
@@ -597,7 +597,7 @@
                         the ambiance are just perfect. I can't wait to visit again!</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle"
-                             src="{% static 'assets/img/testimonial_1.jpg' %}" style="width: 50px; height: 50px;"
+                             src="{% static 'assets/img/testimonial/t1.jpg' %}" style="width: 50px; height: 50px;"
                              alt="testimonial-image one">
                         <div class="ps-3">
                             <h5 class="mb-1">Ann Wambui</h5>
@@ -611,7 +611,7 @@
                         attentive, and the setup was just beautiful.</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle"
-                             src="{% static 'assets/img/testimonial_2.jpg' %}" style="width: 50px; height: 50px;"
+                             src="{% static 'assets/img/testimonial/t2.jpg' %}" style="width: 50px; height: 50px;"
                              alt="testimonial-image two">
                         <div class="ps-3">
                             <h5 class="mb-1">Sarah Lee</h5>
@@ -625,7 +625,7 @@
                         we adults enjoy the serene views and excellent meals.</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle"
-                             src="{% static 'assets/img/testimonial_3.jpg' %}" style="width: 50px; height: 50px;"
+                             src="{% static 'assets/img/testimonial/t3.jpg' %}" style="width: 50px; height: 50px;"
                              alt="testimonial-image three">
                         <div class="ps-3">
                             <h5 class="mb-1">Joseph Otieno</h5>
@@ -639,7 +639,7 @@
                         signature dishes made my anniversary dinner unforgettable.</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle"
-                             src="{% static 'assets/img/testimonial_4.png' %}" style="width: 50px; height: 50px;"
+                             src="{% static 'assets/img/testimonial/t4.png' %}" style="width: 50px; height: 50px;"
                              alt="testimonial-image seven">
                         <div class="ps-3">
                             <h5 class="mb-1">Alice Johnson</h5>
@@ -653,7 +653,7 @@
                         in the tranquility. It’s a dream for nature lovers.</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle"
-                             src="{% static 'assets/img/testimonial_5.jpg' %}" style="width: 50px; height: 50px;"
+                             src="{% static 'assets/img/testimonial/t5.jpg' %}" style="width: 50px; height: 50px;"
                              alt="testimonial-image ten">
                         <div class="ps-3">
                             <h5 class="mb-1">Oliver Kamau</h5>
@@ -667,7 +667,7 @@
                         unparalleled, with expert guidance and beautiful lake views.</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle"
-                             src="{% static 'assets/img/testimonial_6.png' %}" style="width: 50px; height: 50px;"
+                             src="{% static 'assets/img/testimonial/t6.png' %}" style="width: 50px; height: 50px;"
                              alt="testimonial-image eleven">
                         <div class="ps-3">
                             <h5 class="mb-1">Peter Brian</h5>
