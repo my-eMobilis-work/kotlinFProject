@@ -17,10 +17,10 @@
     </div>
 
     <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-        <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+        <ul class="nav owl-nav-pills d-inline-flex justify-content-center border-bottom mb-5">
             <!-- Table Reservation Tab -->
-            <li class="nav-item">
-                <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" href="#table_reservation">
+            <li class="owl-nav-item active">
+                <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 owl-slide-link" data-slide-to="0">
                     <i class="fa fa-utensils fa-2x text-primary"></i>
                     <div class="ps-3">
                         <small class="text-body">Dining</small>
@@ -30,8 +30,8 @@
             </li>
 
             <!-- Event Reservation Tab -->
-            <li class="nav-item">
-                <a class="d-flex align-items-center text-start mx-3 pb-3" href="#event_reservation">
+            <li class="owl-nav-item">
+                <a class="d-flex align-items-center text-start mx-3 pb-3 owl-slide-link" data-slide-to="1">
                     <i class="fa fa-birthday-cake fa-2x text-primary"></i>
                     <div class="ps-3">
                         <small class="text-body">Celebrations</small>
@@ -41,8 +41,8 @@
             </li>
 
             <!-- Conference Room Reservation Tab -->
-            <li class="nav-item">
-                <a class="d-flex align-items-center text-start mx-3 pb-3" href="#conference_reservation">
+            <li class="owl-nav-item">
+                <a class="d-flex align-items-center text-start mx-3 pb-3 owl-slide-link" data-slide-to="2">
                     <i class="fa fa-briefcase fa-2x text-primary"></i>
                     <div class="ps-3">
                         <small class="text-body">Business</small>
@@ -52,8 +52,8 @@
             </li>
 
             <!-- Boat/Jet Ski Rides Reservation Tab -->
-            <li class="nav-item">
-                <a class="d-flex align-items-center text-start mx-3 pb-3" href="#boat_reservation">
+            <li class="owl-nav-item">
+                <a class="d-flex align-items-center text-start mx-3 pb-3 owl-slide-link" data-slide-to="3">
                     <i class="fa fa-ship fa-2x text-primary"></i>
                     <div class="ps-3">
                         <small class="text-body">Adventure</small>
@@ -64,321 +64,366 @@
         </ul>
     </div>
 
-    <div class="container-xxl py-3 mt-5">
-        <div class="container">
+
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <div class="alert alert-success text-center border border-2 border-success rounded-3" role="alert">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Alert! </strong>{{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Booking Carousel Start -->
+    <div id="owl-carousel-custom" class="owl-carousel owl-theme">
+
+        <div class="item">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-4">Book A Table</h1>
             </div>
-            <div class="row g-5 align-items-center">
+            <div class="row align-items-center pb-3">
                 <p class="lead mb-0">At Twiga Resort, we believe every meal is a moment to savor. Whether you're
                     celebrating a special occasion or simply enjoying a quiet evening with loved ones, our table
                     reservations provide the perfect setting.<br>Indulge in exquisite dishes while enjoying serene
                     lakeside views. Book your table today for an unforgettable dining experience.</p>
             </div>
-        </div>
-    </div>
-
-
-
-    <!-- Reservation Start -->
-    <div id="table_reservation" class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <div class="booking imageTable"></div>
-            </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center">
-                <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Online Reservation</h5>
-                    <h1 class="text-white mb-4">Book A Table</h1>
-                    <form>
-                    {% csrf_token %}
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+            <div class="row g-0">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <div class="bookings imageTable"></div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-6">
+                    <div id="event_reservation"
+                         class="container-xxl wow fadeInUp bg-dark align-items-center"
+                         data-wow-delay="0.1s">
+                        <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <h5 class="section-title ff-secondary text-start text-primary fw-normal">
+                                Online Reservation</h5>
+                            <h1 class="text-white mb-4">Book A Table</h1>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name"
+                                                   placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                   placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3"
+                                             data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input"
+                                                   id="datetime"
+                                                   placeholder="Date & Time" data-target="#date3"
+                                                   data-toggle="datetimepicker"/>
+                                            <label for="datetime">Date & Time</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="select1">
+                                                <option value="1">1 - 4</option>
+                                                <option value="2">6 - 10</option>
+                                                <option value="3">10 +</option>
+                                            </select>
+                                            <label for="select1">No Of People</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                                        <textarea class="form-control" placeholder="Special Request"
+                                                                  id="message"
+                                                                  style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book
+                                            Now
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                           placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker"/>
-                                    <label for="datetime">Date & Time</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select1">
-                                        <option value="1">1 - 4</option>
-                                        <option value="2">6 - 10</option>
-                                        <option value="3">10 +</option>
-                                    </select>
-                                    <label for="select1">No Of People</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Special Request" id="message"
-                                              style="height: 100px"></textarea>
-                                    <label for="message">Special Request</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Reservation End -->
-
-    <div class="container-xxl py-3 mt-5">
-        <div class="container">
+        <div class="item">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-4">Book An Event Space</h1>
             </div>
-            <div class="row g-5 align-items-center">
-                    <p class="lead mb-0">Celebrate life’s milestones with us. At Twiga Resort, our event spaces are
-                        designed
-                        to make your special occasions unforgettable. From birthdays to weddings and everything in
-                        between,
-                        we offer a beautifully crafted venue to suit your needs. Let us help bring your vision to life
-                        and
-                        create memories that will last a lifetime. Book your celebration space now!</p>
+            <div class="row align-items-center pb-3">
+                <p class="lead mb-0">At Twiga Resort, our event
+                    spaces are designed
+                    to make your special occasions unforgettable. From birthdays to weddings and
+                    everything in between,
+                    we offer a beautifully crafted venue to suit your needs. Let us help bring your
+                    vision to life
+                    and create memories that will last a lifetime.</p>
             </div>
-        </div>
-    </div>
-
-    <!-- Reservation Start -->
-    <div id="event_reservation" class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <div class="booking imageEvent"></div>
-            </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center">
-                <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Online Reservation</h5>
-                    <h1 class="text-white mb-4">Book An Event Space</h1>
-                    <form>
-                    {% csrf_token %}
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+            <div class="row g-0">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <div class="bookings imageEvent"></div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-6">
+                    <div id="event_reservation"
+                         class="container-xxl wow fadeInUp bg-dark align-items-center"
+                         data-wow-delay="0.1s">
+                        <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <h5 class="section-title ff-secondary text-start text-primary fw-normal">
+                                Online Reservation</h5>
+                            <h1 class="text-white mb-4">Book An Event Space</h1>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name"
+                                                   placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                   placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3"
+                                             data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input"
+                                                   id="datetime"
+                                                   placeholder="Date & Time" data-target="#date3"
+                                                   data-toggle="datetimepicker"/>
+                                            <label for="datetime">Date & Time</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="select1">
+                                                <option value="1">1 - 4</option>
+                                                <option value="2">6 - 10</option>
+                                                <option value="3">10 +</option>
+                                            </select>
+                                            <label for="select1">No Of People</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                                        <textarea class="form-control" placeholder="Special Request"
+                                                                  id="message"
+                                                                  style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book
+                                            Now
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                           placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker"/>
-                                    <label for="datetime">Date & Time</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select1">
-                                        <option value="1">1 - 4</option>
-                                        <option value="2">6 - 10</option>
-                                        <option value="3">10 +</option>
-                                    </select>
-                                    <label for="select1">No Of People</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Special Request" id="message"
-                                              style="height: 100px"></textarea>
-                                    <label for="message">Special Request</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Reservation End -->
-
-    <div class="container-xxl py-3 mt-5">
-        <div class="container">
+        <div class="item">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-4">Book a Conference Room</h1>
+                <h1 class="mb-4">Book A Conference Room</h1>
             </div>
-            <div class="row g-5 align-items-center">
-                    <p class="lead mb-0">When it comes to business, we understand the importance of a professional and
-                        comfortable environment. Our conference rooms are equipped with state-of-the-art technology and
-                        a peaceful atmosphere to ensure that your meetings run smoothly. Whether you're hosting a small
-                        workshop or a large corporate seminar, Twiga Resort provides the perfect space for your
-                        professional needs.</p>
+            <div class="row align-items-center pb-3">
+                <p class="lead mb-0">When it comes to business, we understand the importance of a professional and
+                    comfortable environment. Our conference rooms are equipped with state-of-the-art technology and
+                    a peaceful atmosphere to ensure that your meetings run smoothly. Whether you're hosting a small
+                    workshop or a large corporate seminar, Twiga Resort provides the perfect space for your
+                    professional needs.</p>
             </div>
-        </div>
-    </div>
-
-
-    <!-- Reservation Start -->
-    <div id="conference_reservation" class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <div class="booking imageConference"></div>
-            </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center">
-                <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Online Reservation</h5>
-                    <h1 class="text-white mb-4">Book A Conference Room</h1>
-                    <form>
-                    {% csrf_token %}
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+            <div class="row g-0">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <div class="bookings imageConference"></div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-6">
+                    <div id="event_reservation"
+                         class="container-xxl wow fadeInUp bg-dark align-items-center"
+                         data-wow-delay="0.1s">
+                        <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <h5 class="section-title ff-secondary text-start text-primary fw-normal">
+                                Online Reservation</h5>
+                            <h1 class="text-white mb-4">Book A Conference Room</h1>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name"
+                                                   placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                   placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3"
+                                             data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input"
+                                                   id="datetime"
+                                                   placeholder="Date & Time" data-target="#date3"
+                                                   data-toggle="datetimepicker"/>
+                                            <label for="datetime">Date & Time</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="select1">
+                                                <option value="1">1 - 4</option>
+                                                <option value="2">6 - 10</option>
+                                                <option value="3">10 +</option>
+                                            </select>
+                                            <label for="select1">No Of People</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                                        <textarea class="form-control" placeholder="Special Request"
+                                                                  id="message"
+                                                                  style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book
+                                            Now
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                           placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker"/>
-                                    <label for="datetime">Date & Time</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select1">
-                                        <option value="1">1 - 4</option>
-                                        <option value="2">6 - 10</option>
-                                        <option value="3">10 +</option>
-                                    </select>
-                                    <label for="select1">No Of People</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Special Request" id="message"
-                                              style="height: 100px"></textarea>
-                                    <label for="message">Special Request</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Reservation End -->
-
-    <div class="container-xxl py-3 mt-5">
-        <div class="container">
+        <div class="item">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-4">Book A Boat or Jet Ski Ride</h1>
             </div>
-            <div class="row g-5 align-items-center">
-                    <p class="lead mb-0">Adventure awaits on the water! At Twiga Resort, we offer thrilling boat and jet
-                        ski
-                        rides to give you an unforgettable experience. Feel the rush of the wind and the waves as you
-                        explore the scenic lakeside. Whether you're looking for an adrenaline-pumping ride or a relaxing
-                        cruise, we’ve got you covered. Book your water adventure today!</p>
+            <div class="row align-items-center pb-3">
+                <p class="lead mb-0">Adventure awaits on the water! At Twiga Resort, we offer thrilling boat and jet
+                    ski
+                    rides to give you an unforgettable experience. Feel the rush of the wind and the waves as you
+                    explore the scenic lakeside. Whether you're looking for an adrenaline-pumping ride or a relaxing
+                    cruise, we’ve got you covered. Book your water adventure today!</p>
             </div>
-        </div>
-    </div>
-
-
-    <!-- Reservation Start -->
-    <div id="boat_reservation" class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <div class="booking imageBoat"></div>
-            </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center">
-                <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Online Reservation</h5>
-                    <h1 class="text-white mb-4">Book A Boat or Jet Ski Ride</h1>
-                    <form>
-                    {% csrf_token %}
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+            <div class="row g-0">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <div class="bookings imageBoat"></div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-6">
+                    <div id="event_reservation"
+                         class="container-xxl wow fadeInUp bg-dark align-items-center"
+                         data-wow-delay="0.1s">
+                        <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <h5 class="section-title ff-secondary text-start text-primary fw-normal">
+                                Online Reservation</h5>
+                            <h1 class="text-white mb-4">Book A Boat or Jet Ski Ride</h1>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name"
+                                                   placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                   placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3"
+                                             data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input"
+                                                   id="datetime"
+                                                   placeholder="Date & Time" data-target="#date3"
+                                                   data-toggle="datetimepicker"/>
+                                            <label for="datetime">Date & Time</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="select1">
+                                                <option value="1">1 - 4</option>
+                                                <option value="2">6 - 10</option>
+                                                <option value="3">10 +</option>
+                                            </select>
+                                            <label for="select1">No Of People</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                                        <textarea class="form-control" placeholder="Special Request"
+                                                                  id="message"
+                                                                  style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book
+                                            Now
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                           placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker"/>
-                                    <label for="datetime">Date & Time</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select1">
-                                        <option value="1">1 - 4</option>
-                                        <option value="2">6 - 10</option>
-                                        <option value="3">10 +</option>
-                                    </select>
-                                    <label for="select1">No Of People</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Special Request" id="message"
-                                              style="height: 100px"></textarea>
-                                    <label for="message">Special Request</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Reservation End -->
 
-  <div class="container-xxl py-3 text-center">
-    <div class="alert alert-warning mt-5" role="alert">
-        <p class="mb-2">
-            <strong>Important:</strong> Reservations are confirmed only upon payment. Unpaid reservations do not guarantee a booking and may result in the loss of your requested slot. Availability is subject to change.
-        </p>
-        <p class="mb-0">
-            For the most accurate and up-to-date availability information, or if you have any questions, please <a href="tel:+1234567890" class="text-primary">call us</a> or <a href="mailto:info@twigaresort.com" class="text-primary">email us</a>. We’re happy to assist you.
-        </p>
     </div>
-</div>
+    <!-- Booking Carousel End -->
+
+
+
+    <div class="container-xxl py-3 text-center">
+        <div class="alert alert-warning mt-5" role="alert">
+            <p class="mb-2">
+                <strong>Important:</strong> Reservations are confirmed only upon payment. Unpaid reservations do not
+                guarantee a booking and may result in the loss of your requested slot. Availability is subject to
+                change.
+            </p>
+            <p class="mb-0">
+                For the most accurate and up-to-date availability information, or if you have any questions, please <a
+                    href="tel:+1234567890" class="text-primary">call us</a> or <a href="mailto:info@twigaresort.com"
+                                                                                  class="text-primary">email us</a>.
+                We’re happy to assist you.
+            </p>
+        </div>
+    </div>
 
 
 

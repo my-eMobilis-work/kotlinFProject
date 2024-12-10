@@ -27,6 +27,7 @@ class Managers(models.Model):
 class Contacts(models.Model):
     name = models.CharField(max_length=70)
     phone = models.CharField(max_length=15)
+    email = models.EmailField(null=True, blank=True)
     subject = models.CharField(max_length=50)
     message = models.TextField(max_length=250)
 

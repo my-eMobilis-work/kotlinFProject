@@ -85,7 +85,8 @@ def contact(request):
             message=request.POST['message'],
         )
         new_contact.save()
-        return redirect('/contact')
+        messages.success(request, 'Your message has been sent successfully!')
+        return redirect('/contact#contact_heading')
     else:
         return render(request, 'contact.html')
 

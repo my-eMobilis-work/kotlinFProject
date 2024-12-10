@@ -71,7 +71,7 @@
 
                                 <div class="col-12 col-md-6">
                                     <div class="col-12">
-                                        <input type="file" class="form-control" name="image">
+                                        <input type="file" class="form-control" name="image" id="custom_image_upload_input">
                                         <label for="image" class="form-label">Profile Image</label>
                                     </div>
                                     <div class="col-12">
@@ -89,7 +89,7 @@
 
                             {% if messages %}
                                 <div class="col-12 mt-1">
-                                    <div class="form-control alert alert-danger alert-dismissible fade show border border-2 border-danger"
+                                    <div class="form-control alert alert-danger alert-dismissible fade show border border-2 border-danger rounded-3 "
                                          role="alert">
                                         {% for message in messages %}
                                             <strong><i class="bi bi-exclamation-triangle-fill"></i>

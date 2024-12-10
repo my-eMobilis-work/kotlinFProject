@@ -34,632 +34,1248 @@
         </div>
     </div>
 
+    <div class="container mb-5">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal  mb-2">Food Menu</h5>
+            <h1 class="mb-5">Here is our complete menu</h1>
+        </div>
+    </div>
 
-    <div class="container-xxl py-5">
-        <div class="container mb-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h5 class="section-title ff-secondary text-center text-primary fw-normal  mb-2">Food Menu</h5>
-                <h1 class="mb-5">Here is our complete menu</h1>
+    <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+        <ul class="nav owl-nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+            <li class="owl-nav-item active">
+                <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 owl-slide-link" data-slide-to="0">
+                    <i class="fa fa-coffee fa-2x text-primary"></i>
+                    <div class="ps-3">
+                        <small class="text-body">Popular</small>
+                        <h6 class="mt-n1 mb-0">Breakfast</h6>
+                    </div>
+                </a>
+            </li>
+            <li class="owl-nav-item">
+                <a class="d-flex align-items-center text-start mx-3 pb-3 owl-slide-link" data-slide-to="1">
+                    <i class="fa fa-hamburger fa-2x text-primary"></i>
+                    <div class="ps-3">
+                        <small class="text-body">Special</small>
+                        <h6 class="mt-n1 mb-0">Lunch</h6>
+                    </div>
+                </a>
+            </li>
+            <li class="owl-nav-item">
+                <a class="d-flex align-items-center text-start mx-3 pb-3 owl-slide-link" data-slide-to="2">
+                    <i class="fa fa-utensils fa-2x text-primary"></i>
+                    <div class="ps-3">
+                        <small class="text-body">Lovely</small>
+                        <h6 class="mt-n1 mb-0">Dinner</h6>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Menu Carousel Start -->
+    <div id="owl-carousel-custom" class="owl-carousel owl-theme">
+
+        <div class="item">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/pancakes.jpg' %}" alt="Twiga Pancakes"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Twiga Pancakes</span>
+                                    <span class="text-primary">KSh 200</span>
+                                </h5>
+                                <small class="fst-italic">Fluffy pancakes with fresh fruit and syrup</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/veggie_omelette.jpg' %}"
+                                 alt="Veggie Omelette"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Veggie Omelette</span>
+                                    <span class="text-primary">KSh 850</span>
+                                </h5>
+                                <small class="fst-italic">Loaded with fresh vegetables and herbs</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/avocado_toast.jpg' %}" alt="Avocado Toast"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Avocado Toast</span>
+                                    <span class="text-primary">KSh 500</span>
+                                </h5>
+                                <small class="fst-italic">Smashed avocado on toast with a poached egg. With
+                                    coffee or tea.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/bagel.jpg' %}"
+                                 alt="Bagel with Cream Cheese"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Bagel with Cream Cheese</span>
+                                    <span class="text-primary">KSh 1,250</span>
+                                </h5>
+                                <small class="fst-italic">Toasted bagel with creamy cheese and a touch of
+                                    honey</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/fruit_parfait.jpg' %}" alt="Fruit Parfait"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Fruit Parfait</span>
+                                    <span class="text-primary">KSh 650</span>
+                                </h5>
+                                <small class="fst-italic">Layered yogurt, granola, and fresh seasonal
+                                    fruits</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/french_toast.jpg' %}" alt="French Toast"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>French Toast</span>
+                                    <span class="text-primary">KSh 500</span>
+                                </h5>
+                                <small class="fst-italic">Golden crispy toast with a cinnamon and sugar
+                                    dusting.
+                                    With a side of eggs and coffee or tea.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/scrambled_eggs.jpg' %}"
+                                 alt="Scrambled Eggs"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Scrambled Eggs</span>
+                                    <span class="text-primary">KSh 200</span>
+                                </h5>
+                                <small class="fst-italic">Classic scrambled eggs with a dash of
+                                    cheese</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/smoked_tilapia_bagel.jpg' %}"
+                                 alt="Smoked Tilapia Bagel"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Smoked Tilapia Bagel</span>
+                                    <span class="text-primary">KSh 1,200</span>
+                                </h5>
+                                <small class="fst-italic">Bagel topped with smoked tilapia, capers and
+                                    onions</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/egg_benedict.jpg' %}" alt="Egg Benedict"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Egg Benedict</span>
+                                    <span class="text-primary">KSh 450</span>
+                                </h5>
+                                <small class="fst-italic">Poached eggs on an English muffin with hollandaise
+                                    sauce</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/chia_pudding.jpg' %}" alt="Chia Pudding"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Chia Pudding</span>
+                                    <span class="text-primary">KSh 200</span>
+                                </h5>
+                                <small class="fst-italic">A healthy, creamy chia pudding topped with
+                                    berries</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/burrito.jpg' %}" alt="Breakfast Burrito"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Breakfast Burrito</span>
+                                    <span class="text-primary">KSh 1,105</span>
+                                </h5>
+                                <small class="fst-italic">Scrambled eggs, cheese, and veggies wrapped in a
+                                    warm
+                                    tortilla</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center">
+                            <img class="flex-shrink-0 img-fluid menu-item-img"
+                                 src="{% static 'assets/img/menu/porridge.jpg' %}" alt="Porridge with Honey"
+                                 style="width: 80px;">
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                    <span>Porridge with Honey</span>
+                                    <span class="text-primary">KSh 250</span>
+                                </h5>
+                                <small class="fst-italic">Creamy porridge served with a drizzle of honey and
+                                    fresh fruit</small>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                    <li class="nav-item">
-                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
-                           href="#tab-1">
-                            <i class="fa fa-coffee fa-2x text-primary"></i>
-                            <div class="ps-3">
-                                <small class="text-body">Popular</small>
-                                <h6 class="mt-n1 mb-0">Breakfast</h6>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                            <i class="fa fa-hamburger fa-2x text-primary"></i>
-                            <div class="ps-3">
-                                <small class="text-body">Special</small>
-                                <h6 class="mt-n1 mb-0">Lunch</h6>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
-                           href="#tab-3">
-                            <i class="fa fa-utensils fa-2x text-primary"></i>
-                            <div class="ps-3">
-                                <small class="text-body">Lovely</small>
-                                <h6 class="mt-n1 mb-0">Dinner</h6>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="spinner-border text-primary justify-content-center align-items-center" role="status"
-                             id="tab-1-spinner">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <div class="row g-4" id="tab-1-content" style="display:none;">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/pancakes.jpg' %}" alt="Twiga Pancakes"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Twiga Pancakes</span>
-                                                <span class="text-primary">KSh 200</span>
-                                            </h5>
-                                            <small class="fst-italic">Fluffy pancakes with fresh fruit and syrup</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/veggie_omelette.jpg' %}"
-                                             alt="Veggie Omelette"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Veggie Omelette</span>
-                                                <span class="text-primary">KSh 850</span>
-                                            </h5>
-                                            <small class="fst-italic">Loaded with fresh vegetables and herbs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/avocado_toast.jpg' %}" alt="Avocado Toast"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Avocado Toast</span>
-                                                <span class="text-primary">KSh 500</span>
-                                            </h5>
-                                            <small class="fst-italic">Smashed avocado on toast with a poached egg. With
-                                                coffee or tea.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/bagel.jpg' %}"
-                                             alt="Bagel with Cream Cheese"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Bagel with Cream Cheese</span>
-                                                <span class="text-primary">KSh 1,250</span>
-                                            </h5>
-                                            <small class="fst-italic">Toasted bagel with creamy cheese and a touch of
-                                                honey</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/fruit_parfait.jpg' %}" alt="Fruit Parfait"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Fruit Parfait</span>
-                                                <span class="text-primary">KSh 650</span>
-                                            </h5>
-                                            <small class="fst-italic">Layered yogurt, granola, and fresh seasonal
-                                                fruits</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/french_toast.jpg' %}" alt="French Toast"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>French Toast</span>
-                                                <span class="text-primary">KSh 500</span>
-                                            </h5>
-                                            <small class="fst-italic">Golden crispy toast with a cinnamon and sugar
-                                                dusting.
-                                                With a side of eggs and coffee or tea.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/scrambled_eggs.jpg' %}"
-                                             alt="Scrambled Eggs"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Scrambled Eggs</span>
-                                                <span class="text-primary">KSh 200</span>
-                                            </h5>
-                                            <small class="fst-italic">Classic scrambled eggs with a dash of
-                                                cheese</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/smoked_tilapia_bagel.jpg' %}"
-                                             alt="Smoked Tilapia Bagel"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Smoked Tilapia Bagel</span>
-                                                <span class="text-primary">KSh 1,200</span>
-                                            </h5>
-                                            <small class="fst-italic">Bagel topped with smoked tilapia, capers and
-                                                onions</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/egg_benedict.jpg' %}" alt="Egg Benedict"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Egg Benedict</span>
-                                                <span class="text-primary">KSh 450</span>
-                                            </h5>
-                                            <small class="fst-italic">Poached eggs on an English muffin with hollandaise
-                                                sauce</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/chia_pudding.jpg' %}" alt="Chia Pudding"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chia Pudding</span>
-                                                <span class="text-primary">KSh 200</span>
-                                            </h5>
-                                            <small class="fst-italic">A healthy, creamy chia pudding topped with
-                                                berries</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/burrito.jpg' %}" alt="Breakfast Burrito"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Breakfast Burrito</span>
-                                                <span class="text-primary">KSh 1,105</span>
-                                            </h5>
-                                            <small class="fst-italic">Scrambled eggs, cheese, and veggies wrapped in a
-                                                warm
-                                                tortilla</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid menu-item-img"
-                                             src="{% static 'assets/img/menu/porridge.jpg' %}" alt="Porridge with Honey"
-                                             style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Porridge with Honey</span>
-                                                <span class="text-primary">KSh 250</span>
-                                            </h5>
-                                            <small class="fst-italic">Creamy porridge served with a drizzle of honey and
-                                                fresh fruit</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+        <div class="item">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/vegetable_stir_fry.jpg' %}"
+                             alt="Vegetable Stir-Fry" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Vegetable Stir-Fry</span>
+                                <span class="text-primary">KSh 1,500</span>
+                            </h5>
+                            <small class="fst-italic">A colorful mix of fresh vegetables in a savory
+                                soy-based sauce</small>
                         </div>
                     </div>
-
-                    <div id="tab-2" class="tab-pane fade p-0">
-                        <div class="spinner-border text-primary justify-content-center align-items-center" role="status"
-                             id="tab-2-spinner">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <div class="row g-4" id="tab-2-content" style="display:none;">
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/vegetable_stir_fry.jpg' %}"
-                                         alt="Vegetable Stir-Fry" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Vegetable Stir-Fry</span>
-                                            <span class="text-primary">KSh 1,500</span>
-                                        </h5>
-                                        <small class="fst-italic">A colorful mix of fresh vegetables in a savory
-                                            soy-based sauce</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/fries.jpg' %}" alt="Fries Combo"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Fries Combo</span>
-                                            <span class="text-primary">KSh 1,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Crispy golden fries served with your choice of beef,
-                                            pork, chicken, or fish.</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/chicken_alfredo_pasta.jpg' %}"
-                                         alt="Chicken Alfredo Pasta" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Alfredo Pasta</span>
-                                            <span class="text-primary">KSh 2,200</span>
-                                        </h5>
-                                        <small class="fst-italic">Creamy Alfredo sauce over fettuccine pasta with
-                                            grilled chicken</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/margherita_pizza.jpg' %}"
-                                         alt="Margherita Pizza" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Margherita Pizza</span>
-                                            <span class="text-primary">KSh 1,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Classic pizza with fresh mozzarella, basil and tomato
-                                            sauce</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/seafood_paella.jpg' %}"
-                                         alt="Seafood Paella" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Seafood Paella</span>
-                                            <span class="text-primary">KSh 2,600</span>
-                                        </h5>
-                                        <small class="fst-italic">A flavorful Spanish rice dish with shrimp, mussels and
-                                            spices</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/pulled_pork.jpg' %}"
-                                         alt="BBQ Pulled Pork" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>BBQ Pulled Pork</span>
-                                            <span class="text-primary">KSh 2,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Tender pulled pork with tangy BBQ sauce on a toasted
-                                            bun</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/tandoori_chicken_wrap.jpg' %}"
-                                         alt="Tandoori Chicken Wrap" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Tandoori Chicken Wrap</span>
-                                            <span class="text-primary">KSh 1,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Spiced tandoori chicken, wrapped with fresh veggies
-                                            and tangy yogurt sauce, paired with your choice of rice or fries.</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/beef_stroganoff.jpg' %}"
-                                         alt="Beef Stroganoff" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Beef Stroganoff</span>
-                                            <span class="text-primary">KSh 1,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Tender beef strips in a creamy mushroom sauce served
-                                            over egg noodles</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/teriyaki_chicken_bowl.jpg' %}"
-                                         alt="Teriyaki Chicken Bowl" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Teriyaki Chicken Bowl</span>
-                                            <span class="text-primary">KSh 2,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Grilled chicken served over rice with a savory
-                                            teriyaki glaze</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/grilled_tilapia.jpg' %}"
-                                         alt="Grilled Tilapia" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Grilled Tilapia</span>
-                                            <span class="text-primary">KSh 2,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Perfectly grilled tilapia with a side of lemon herb
-                                            butter</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/loaded_nachos.jpg' %}"
-                                         alt="Loaded Nachos" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Loaded Nachos</span>
-                                            <span class="text-primary">KSh 1,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Crispy tortilla chips topped with melted cheese, salsa
-                                            and jalapeños</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/spicy_thai_basil_chicken.jpg' %}"
-                                         alt="Spicy Thai Basil Chicken" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Spicy Thai Basil Chicken</span>
-                                            <span class="text-primary">Ksh 2,450</span>
-                                        </h5>
-                                        <small class="fst-italic">A flavorful dish with minced chicken, spicy basil
-                                            sauce and jasmine rice.</small>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/fries.jpg' %}" alt="Fries Combo"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Fries Combo</span>
+                                <span class="text-primary">KSh 1,500</span>
+                            </h5>
+                            <small class="fst-italic">Crispy golden fries served with your choice of beef,
+                                pork, chicken, or fish.</small>
                         </div>
                     </div>
-
-                    <div id="tab-3" class="tab-pane fade p-0">
-                        <div class="spinner-border text-primary justify-content-center align-items-center" role="status"
-                             id="tab-3-spinner">
-                            <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/chicken_alfredo_pasta.jpg' %}"
+                             alt="Chicken Alfredo Pasta" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Chicken Alfredo Pasta</span>
+                                <span class="text-primary">KSh 2,200</span>
+                            </h5>
+                            <small class="fst-italic">Creamy Alfredo sauce over fettuccine pasta with
+                                grilled chicken</small>
                         </div>
-                        <div class="row g-4" id="tab-3-content" style="display:none;">
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/teriyaki_glazed_catfish.jpg' %}"
-                                         alt="Teriyaki Glazed Catfish"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Teriyaki Glazed Catfish</span>
-                                            <span class="text-primary">KSh 2,300</span>
-                                        </h5>
-                                        <small class="fst-italic">Catfish glazed with teriyaki sauce, served with
-                                            steamed vegetables</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/duck_orange.jpg' %}" alt="Duck à l'Orange"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Duck à l'Orange</span>
-                                            <span class="text-primary">KSh 2,500</span>
-                                        </h5>
-                                        <small class="fst-italic">Roasted duck with a tangy orange sauce</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/roasted_vegetable_quinoa_bowl.jpg' %}"
-                                         alt="Roasted Vegetable Quinoa Bowl"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Roasted Vegetable Quinoa Bowl</span>
-                                            <span class="text-primary">KSh 2,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Quinoa served with a variety of seasoned roasted
-                                            vegetables</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/pork_tenderloin_with_apples.jpg' %}"
-                                         alt="Pork Tenderloin with Apples"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Pork Tenderloin with Apples</span>
-                                            <span class="text-primary">KSh 2,200</span>
-                                        </h5>
-                                        <small class="fst-italic">Juicy pork tenderloin cooked with caramelized
-                                            apples</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/cajun_shrimp_pasta.jpg' %}"
-                                         alt="Cajun Shrimp Pasta"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Cajun Shrimp Pasta</span>
-                                            <span class="text-primary">KSh 3,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Pasta tossed with shrimp, Cajun spices, and a creamy
-                                            sauce</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/moroccan_lamb_tagine.jpg' %}"
-                                         alt="Moroccan Lamb Tagine"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Moroccan Lamb Tagine</span>
-                                            <span class="text-primary">KSh 3,600</span>
-                                        </h5>
-                                        <small class="fst-italic">Tender lamb cooked with apricots, almonds and
-                                            Moroccan spices</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/baked_nile_perch_with_lemon.jpg' %}"
-                                         alt="Baked Nile Perch with Lemon"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Baked Nile Perch with Lemon</span>
-                                            <span class="text-primary">KSh 2,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Fresh nile perch baked with lemon, garlic, and
-                                            herbs</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/spinach_and_ricotta_cannelloni.jpg' %}"
-                                         alt="Spinach and Ricotta Cannelloni"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Spinach and Ricotta Cannelloni</span>
-                                            <span class="text-primary">KSh 2,800</span>
-                                        </h5>
-                                        <small class="fst-italic">Cannelloni stuffed with creamy ricotta and spinach,
-                                            baked in marinara sauce</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/rice_and_cheese_stuffed_meatballs.jpg' %}"
-                                         alt="Cheese-Stuffed Meatballs" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Cheese-Stuffed Meatballs</span>
-                                            <span class="text-primary">KSh 2,900</span>
-                                        </h5>
-                                        <small class="fst-italic">Meatballs stuffed with gooey cheese, served with rice
-                                            and marinara sauce</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/beef_glazed_ham.jpg' %}" alt="Beef-Glazed Ham"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Beef-Glazed Ham</span>
-                                            <span class="text-primary">KSh 2,100</span>
-                                        </h5>
-                                        <small class="fst-italic">Beef baked with a sweet honey glaze, served with your
-                                            choice of
-                                            mashed potatoes, rice or corn dumplings</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/vegetable_fried_rice.jpg' %}"
-                                         alt="Vegetable Fried Rice">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Vegetable Fried Rice</span>
-                                            <span class="text-primary">Ksh 2,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Fluffy vegetable fried rice, pair with your choice of
-                                            nutrient-rich hard-boiled eggs,
-                                            beef,
-                                            pork, chicken, or fish.</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid menu-item-img"
-                                         src="{% static 'assets/img/menu/beef_wellington.jpg' %}" alt="Beef Wellington"
-                                         style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Beef Wellington</span>
-                                            <span class="text-primary">KSh 3,000</span>
-                                        </h5>
-                                        <small class="fst-italic">Classic beef tenderloin wrapped in puff pastry with
-                                            mushroom duxelles</small>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/margherita_pizza.jpg' %}"
+                             alt="Margherita Pizza" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Margherita Pizza</span>
+                                <span class="text-primary">KSh 1,500</span>
+                            </h5>
+                            <small class="fst-italic">Classic pizza with fresh mozzarella, basil and tomato
+                                sauce</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/seafood_paella.jpg' %}"
+                             alt="Seafood Paella" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Seafood Paella</span>
+                                <span class="text-primary">KSh 2,600</span>
+                            </h5>
+                            <small class="fst-italic">A flavorful Spanish rice dish with shrimp, mussels and
+                                spices</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/pulled_pork.jpg' %}"
+                             alt="BBQ Pulled Pork" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>BBQ Pulled Pork</span>
+                                <span class="text-primary">KSh 2,000</span>
+                            </h5>
+                            <small class="fst-italic">Tender pulled pork with tangy BBQ sauce on a toasted
+                                bun</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/tandoori_chicken_wrap.jpg' %}"
+                             alt="Tandoori Chicken Wrap" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Tandoori Chicken Wrap</span>
+                                <span class="text-primary">KSh 1,500</span>
+                            </h5>
+                            <small class="fst-italic">Spiced tandoori chicken, wrapped with fresh veggies
+                                and tangy yogurt sauce, paired with your choice of rice or fries.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/beef_stroganoff.jpg' %}"
+                             alt="Beef Stroganoff" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Beef Stroganoff</span>
+                                <span class="text-primary">KSh 1,500</span>
+                            </h5>
+                            <small class="fst-italic">Tender beef strips in a creamy mushroom sauce served
+                                over egg noodles</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/teriyaki_chicken_bowl.jpg' %}"
+                             alt="Teriyaki Chicken Bowl" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Teriyaki Chicken Bowl</span>
+                                <span class="text-primary">KSh 2,500</span>
+                            </h5>
+                            <small class="fst-italic">Grilled chicken served over rice with a savory
+                                teriyaki glaze</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/grilled_tilapia.jpg' %}"
+                             alt="Grilled Tilapia" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Grilled Tilapia</span>
+                                <span class="text-primary">KSh 2,500</span>
+                            </h5>
+                            <small class="fst-italic">Perfectly grilled tilapia with a side of lemon herb
+                                butter</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/loaded_nachos.jpg' %}"
+                             alt="Loaded Nachos" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Loaded Nachos</span>
+                                <span class="text-primary">KSh 1,000</span>
+                            </h5>
+                            <small class="fst-italic">Crispy tortilla chips topped with melted cheese, salsa
+                                and jalapeños</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/spicy_thai_basil_chicken.jpg' %}"
+                             alt="Spicy Thai Basil Chicken" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Spicy Thai Basil Chicken</span>
+                                <span class="text-primary">Ksh 2,450</span>
+                            </h5>
+                            <small class="fst-italic">A flavorful dish with minced chicken, spicy basil
+                                sauce and jasmine rice.</small>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="item">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/teriyaki_glazed_catfish.jpg' %}"
+                             alt="Teriyaki Glazed Catfish"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Teriyaki Glazed Catfish</span>
+                                <span class="text-primary">KSh 2,300</span>
+                            </h5>
+                            <small class="fst-italic">Catfish glazed with teriyaki sauce, served with
+                                steamed vegetables</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/duck_orange.jpg' %}" alt="Duck à l'Orange"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Duck à l'Orange</span>
+                                <span class="text-primary">KSh 2,500</span>
+                            </h5>
+                            <small class="fst-italic">Roasted duck with a tangy orange sauce</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/roasted_vegetable_quinoa_bowl.jpg' %}"
+                             alt="Roasted Vegetable Quinoa Bowl"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Roasted Vegetable Quinoa Bowl</span>
+                                <span class="text-primary">KSh 2,000</span>
+                            </h5>
+                            <small class="fst-italic">Quinoa served with a variety of seasoned roasted
+                                vegetables</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/pork_tenderloin_with_apples.jpg' %}"
+                             alt="Pork Tenderloin with Apples"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Pork Tenderloin with Apples</span>
+                                <span class="text-primary">KSh 2,200</span>
+                            </h5>
+                            <small class="fst-italic">Juicy pork tenderloin cooked with caramelized
+                                apples</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/cajun_shrimp_pasta.jpg' %}"
+                             alt="Cajun Shrimp Pasta"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Cajun Shrimp Pasta</span>
+                                <span class="text-primary">KSh 3,000</span>
+                            </h5>
+                            <small class="fst-italic">Pasta tossed with shrimp, Cajun spices, and a creamy
+                                sauce</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/moroccan_lamb_tagine.jpg' %}"
+                             alt="Moroccan Lamb Tagine"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Moroccan Lamb Tagine</span>
+                                <span class="text-primary">KSh 3,600</span>
+                            </h5>
+                            <small class="fst-italic">Tender lamb cooked with apricots, almonds and
+                                Moroccan spices</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/baked_nile_perch_with_lemon.jpg' %}"
+                             alt="Baked Nile Perch with Lemon"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Baked Nile Perch with Lemon</span>
+                                <span class="text-primary">KSh 2,000</span>
+                            </h5>
+                            <small class="fst-italic">Fresh nile perch baked with lemon, garlic, and
+                                herbs</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/spinach_and_ricotta_cannelloni.jpg' %}"
+                             alt="Spinach and Ricotta Cannelloni"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Spinach and Ricotta Cannelloni</span>
+                                <span class="text-primary">KSh 2,800</span>
+                            </h5>
+                            <small class="fst-italic">Cannelloni stuffed with creamy ricotta and spinach,
+                                baked in marinara sauce</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/rice_and_cheese_stuffed_meatballs.jpg' %}"
+                             alt="Cheese-Stuffed Meatballs" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Cheese-Stuffed Meatballs</span>
+                                <span class="text-primary">KSh 2,900</span>
+                            </h5>
+                            <small class="fst-italic">Meatballs stuffed with gooey cheese, served with rice
+                                and marinara sauce</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/beef_glazed_ham.jpg' %}" alt="Beef-Glazed Ham"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Beef-Glazed Ham</span>
+                                <span class="text-primary">KSh 2,100</span>
+                            </h5>
+                            <small class="fst-italic">Beef baked with a sweet honey glaze, served with your
+                                choice of
+                                mashed potatoes, rice or corn dumplings</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/vegetable_fried_rice.jpg' %}" alt="Vegetable Fried Rice"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Vegetable Fried Rice</span>
+                                <span class="text-primary">KSh 2,000</span>
+                            </h5>
+                            <small class="fst-italic">Fluffy vegetable fried rice, pair with your choice of
+                                nutrient-rich hard-boiled eggs, beef, pork, chicken, or fish.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid menu-item-img"
+                             src="{% static 'assets/img/menu/beef_wellington.jpg' %}" alt="Beef Wellington"
+                             style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>Beef Wellington</span>
+                                <span class="text-primary">KSh 3,000</span>
+                            </h5>
+                            <small class="fst-italic">Classic beef tenderloin wrapped in puff pastry with
+                                mushroom duxelles</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+    <!-- Menu Carousel End -->
+
+
+
+{#    <div class="container-xxl py-5">#}
+{#        <div class="container mb-5">#}
+{#            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">#}
+{#                <h5 class="section-title ff-secondary text-center text-primary fw-normal  mb-2">Food Menu</h5>#}
+{#                <h1 class="mb-5">Here is our complete menu</h1>#}
+{#            </div>#}
+{##}
+{#            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">#}
+{##}
+{#                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">#}
+{#                    <li class="nav-item">#}
+{#                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"#}
+{#                           href="#tab-1">#}
+{#                            <i class="fa fa-coffee fa-2x text-primary"></i>#}
+{#                            <div class="ps-3">#}
+{#                                <small class="text-body">Popular</small>#}
+{#                                <h6 class="mt-n1 mb-0">Breakfast</h6>#}
+{#                            </div>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li class="nav-item">#}
+{#                        <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">#}
+{#                            <i class="fa fa-hamburger fa-2x text-primary"></i>#}
+{#                            <div class="ps-3">#}
+{#                                <small class="text-body">Special</small>#}
+{#                                <h6 class="mt-n1 mb-0">Lunch</h6>#}
+{#                            </div>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li class="nav-item">#}
+{#                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"#}
+{#                           href="#tab-3">#}
+{#                            <i class="fa fa-utensils fa-2x text-primary"></i>#}
+{#                            <div class="ps-3">#}
+{#                                <small class="text-body">Lovely</small>#}
+{#                                <h6 class="mt-n1 mb-0">Dinner</h6>#}
+{#                            </div>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                </ul>#}
+{##}
+{#                <div class="tab-content">#}
+{#                    <div id="tab-1" class="tab-pane fade show p-0 active">#}
+{#                        <div class="spinner-border text-primary justify-content-center align-items-center" role="status"#}
+{#                             id="tab-1-spinner">#}
+{#                            <span class="visually-hidden">Loading...</span>#}
+{#                        </div>#}
+{#                        <div class="row g-4" id="tab-1-content" style="display:none;">#}
+{#                            <div class="row g-4">#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/pancakes.jpg' %}" alt="Twiga Pancakes"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Twiga Pancakes</span>#}
+{#                                                <span class="text-primary">KSh 200</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Fluffy pancakes with fresh fruit and syrup</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/veggie_omelette.jpg' %}"#}
+{#                                             alt="Veggie Omelette"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Veggie Omelette</span>#}
+{#                                                <span class="text-primary">KSh 850</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Loaded with fresh vegetables and herbs</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/avocado_toast.jpg' %}" alt="Avocado Toast"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Avocado Toast</span>#}
+{#                                                <span class="text-primary">KSh 500</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Smashed avocado on toast with a poached egg. With#}
+{#                                                coffee or tea.</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/bagel.jpg' %}"#}
+{#                                             alt="Bagel with Cream Cheese"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Bagel with Cream Cheese</span>#}
+{#                                                <span class="text-primary">KSh 1,250</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Toasted bagel with creamy cheese and a touch of#}
+{#                                                honey</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/fruit_parfait.jpg' %}" alt="Fruit Parfait"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Fruit Parfait</span>#}
+{#                                                <span class="text-primary">KSh 650</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Layered yogurt, granola, and fresh seasonal#}
+{#                                                fruits</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/french_toast.jpg' %}" alt="French Toast"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>French Toast</span>#}
+{#                                                <span class="text-primary">KSh 500</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Golden crispy toast with a cinnamon and sugar#}
+{#                                                dusting.#}
+{#                                                With a side of eggs and coffee or tea.</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/scrambled_eggs.jpg' %}"#}
+{#                                             alt="Scrambled Eggs"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Scrambled Eggs</span>#}
+{#                                                <span class="text-primary">KSh 200</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Classic scrambled eggs with a dash of#}
+{#                                                cheese</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/smoked_tilapia_bagel.jpg' %}"#}
+{#                                             alt="Smoked Tilapia Bagel"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Smoked Tilapia Bagel</span>#}
+{#                                                <span class="text-primary">KSh 1,200</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Bagel topped with smoked tilapia, capers and#}
+{#                                                onions</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/egg_benedict.jpg' %}" alt="Egg Benedict"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Egg Benedict</span>#}
+{#                                                <span class="text-primary">KSh 450</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Poached eggs on an English muffin with hollandaise#}
+{#                                                sauce</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/chia_pudding.jpg' %}" alt="Chia Pudding"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Chia Pudding</span>#}
+{#                                                <span class="text-primary">KSh 200</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">A healthy, creamy chia pudding topped with#}
+{#                                                berries</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/burrito.jpg' %}" alt="Breakfast Burrito"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Breakfast Burrito</span>#}
+{#                                                <span class="text-primary">KSh 1,105</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Scrambled eggs, cheese, and veggies wrapped in a#}
+{#                                                warm#}
+{#                                                tortilla</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6">#}
+{#                                    <div class="d-flex align-items-center">#}
+{#                                        <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                             src="{% static 'assets/img/menu/porridge.jpg' %}" alt="Porridge with Honey"#}
+{#                                             style="width: 80px;">#}
+{#                                        <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                            <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                                <span>Porridge with Honey</span>#}
+{#                                                <span class="text-primary">KSh 250</span>#}
+{#                                            </h5>#}
+{#                                            <small class="fst-italic">Creamy porridge served with a drizzle of honey and#}
+{#                                                fresh fruit</small>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div id="tab-2" class="tab-pane fade p-0">#}
+{#                        <div class="spinner-border text-primary justify-content-center align-items-center" role="status"#}
+{#                             id="tab-2-spinner">#}
+{#                            <span class="visually-hidden">Loading...</span>#}
+{#                        </div>#}
+{#                        <div class="row g-4" id="tab-2-content" style="display:none;">#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/vegetable_stir_fry.jpg' %}"#}
+{#                                         alt="Vegetable Stir-Fry" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Vegetable Stir-Fry</span>#}
+{#                                            <span class="text-primary">KSh 1,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">A colorful mix of fresh vegetables in a savory#}
+{#                                            soy-based sauce</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/fries.jpg' %}" alt="Fries Combo"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Fries Combo</span>#}
+{#                                            <span class="text-primary">KSh 1,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Crispy golden fries served with your choice of beef,#}
+{#                                            pork, chicken, or fish.</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/chicken_alfredo_pasta.jpg' %}"#}
+{#                                         alt="Chicken Alfredo Pasta" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Chicken Alfredo Pasta</span>#}
+{#                                            <span class="text-primary">KSh 2,200</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Creamy Alfredo sauce over fettuccine pasta with#}
+{#                                            grilled chicken</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/margherita_pizza.jpg' %}"#}
+{#                                         alt="Margherita Pizza" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Margherita Pizza</span>#}
+{#                                            <span class="text-primary">KSh 1,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Classic pizza with fresh mozzarella, basil and tomato#}
+{#                                            sauce</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/seafood_paella.jpg' %}"#}
+{#                                         alt="Seafood Paella" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Seafood Paella</span>#}
+{#                                            <span class="text-primary">KSh 2,600</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">A flavorful Spanish rice dish with shrimp, mussels and#}
+{#                                            spices</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/pulled_pork.jpg' %}"#}
+{#                                         alt="BBQ Pulled Pork" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>BBQ Pulled Pork</span>#}
+{#                                            <span class="text-primary">KSh 2,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Tender pulled pork with tangy BBQ sauce on a toasted#}
+{#                                            bun</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/tandoori_chicken_wrap.jpg' %}"#}
+{#                                         alt="Tandoori Chicken Wrap" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Tandoori Chicken Wrap</span>#}
+{#                                            <span class="text-primary">KSh 1,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Spiced tandoori chicken, wrapped with fresh veggies#}
+{#                                            and tangy yogurt sauce, paired with your choice of rice or fries.</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/beef_stroganoff.jpg' %}"#}
+{#                                         alt="Beef Stroganoff" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Beef Stroganoff</span>#}
+{#                                            <span class="text-primary">KSh 1,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Tender beef strips in a creamy mushroom sauce served#}
+{#                                            over egg noodles</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/teriyaki_chicken_bowl.jpg' %}"#}
+{#                                         alt="Teriyaki Chicken Bowl" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Teriyaki Chicken Bowl</span>#}
+{#                                            <span class="text-primary">KSh 2,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Grilled chicken served over rice with a savory#}
+{#                                            teriyaki glaze</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/grilled_tilapia.jpg' %}"#}
+{#                                         alt="Grilled Tilapia" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Grilled Tilapia</span>#}
+{#                                            <span class="text-primary">KSh 2,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Perfectly grilled tilapia with a side of lemon herb#}
+{#                                            butter</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/loaded_nachos.jpg' %}"#}
+{#                                         alt="Loaded Nachos" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Loaded Nachos</span>#}
+{#                                            <span class="text-primary">KSh 1,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Crispy tortilla chips topped with melted cheese, salsa#}
+{#                                            and jalapeños</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/spicy_thai_basil_chicken.jpg' %}"#}
+{#                                         alt="Spicy Thai Basil Chicken" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Spicy Thai Basil Chicken</span>#}
+{#                                            <span class="text-primary">Ksh 2,450</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">A flavorful dish with minced chicken, spicy basil#}
+{#                                            sauce and jasmine rice.</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div id="tab-3" class="tab-pane fade p-0">#}
+{#                        <div class="spinner-border text-primary justify-content-center align-items-center" role="status"#}
+{#                             id="tab-3-spinner">#}
+{#                            <span class="visually-hidden">Loading...</span>#}
+{#                        </div>#}
+{#                        <div class="row g-4" id="tab-3-content" style="display:none;">#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/teriyaki_glazed_catfish.jpg' %}"#}
+{#                                         alt="Teriyaki Glazed Catfish"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Teriyaki Glazed Catfish</span>#}
+{#                                            <span class="text-primary">KSh 2,300</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Catfish glazed with teriyaki sauce, served with#}
+{#                                            steamed vegetables</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/duck_orange.jpg' %}" alt="Duck à l'Orange"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Duck à l'Orange</span>#}
+{#                                            <span class="text-primary">KSh 2,500</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Roasted duck with a tangy orange sauce</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/roasted_vegetable_quinoa_bowl.jpg' %}"#}
+{#                                         alt="Roasted Vegetable Quinoa Bowl"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Roasted Vegetable Quinoa Bowl</span>#}
+{#                                            <span class="text-primary">KSh 2,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Quinoa served with a variety of seasoned roasted#}
+{#                                            vegetables</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/pork_tenderloin_with_apples.jpg' %}"#}
+{#                                         alt="Pork Tenderloin with Apples"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Pork Tenderloin with Apples</span>#}
+{#                                            <span class="text-primary">KSh 2,200</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Juicy pork tenderloin cooked with caramelized#}
+{#                                            apples</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/cajun_shrimp_pasta.jpg' %}"#}
+{#                                         alt="Cajun Shrimp Pasta"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Cajun Shrimp Pasta</span>#}
+{#                                            <span class="text-primary">KSh 3,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Pasta tossed with shrimp, Cajun spices, and a creamy#}
+{#                                            sauce</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/moroccan_lamb_tagine.jpg' %}"#}
+{#                                         alt="Moroccan Lamb Tagine"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Moroccan Lamb Tagine</span>#}
+{#                                            <span class="text-primary">KSh 3,600</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Tender lamb cooked with apricots, almonds and#}
+{#                                            Moroccan spices</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/baked_nile_perch_with_lemon.jpg' %}"#}
+{#                                         alt="Baked Nile Perch with Lemon"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Baked Nile Perch with Lemon</span>#}
+{#                                            <span class="text-primary">KSh 2,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Fresh nile perch baked with lemon, garlic, and#}
+{#                                            herbs</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/spinach_and_ricotta_cannelloni.jpg' %}"#}
+{#                                         alt="Spinach and Ricotta Cannelloni"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Spinach and Ricotta Cannelloni</span>#}
+{#                                            <span class="text-primary">KSh 2,800</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Cannelloni stuffed with creamy ricotta and spinach,#}
+{#                                            baked in marinara sauce</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/rice_and_cheese_stuffed_meatballs.jpg' %}"#}
+{#                                         alt="Cheese-Stuffed Meatballs" style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Cheese-Stuffed Meatballs</span>#}
+{#                                            <span class="text-primary">KSh 2,900</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Meatballs stuffed with gooey cheese, served with rice#}
+{#                                            and marinara sauce</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/beef_glazed_ham.jpg' %}" alt="Beef-Glazed Ham"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Beef-Glazed Ham</span>#}
+{#                                            <span class="text-primary">KSh 2,100</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Beef baked with a sweet honey glaze, served with your#}
+{#                                            choice of#}
+{#                                            mashed potatoes, rice or corn dumplings</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/vegetable_fried_rice.jpg' %}"#}
+{#                                         alt="Vegetable Fried Rice">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Vegetable Fried Rice</span>#}
+{#                                            <span class="text-primary">Ksh 2,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Fluffy vegetable fried rice, pair with your choice of#}
+{#                                            nutrient-rich hard-boiled eggs,#}
+{#                                            beef,#}
+{#                                            pork, chicken, or fish.</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="col-lg-6">#}
+{#                                <div class="d-flex align-items-center">#}
+{#                                    <img class="flex-shrink-0 img-fluid menu-item-img"#}
+{#                                         src="{% static 'assets/img/menu/beef_wellington.jpg' %}" alt="Beef Wellington"#}
+{#                                         style="width: 80px;">#}
+{#                                    <div class="w-100 d-flex flex-column text-start ps-4">#}
+{#                                        <h5 class="d-flex justify-content-between border-bottom pb-2">#}
+{#                                            <span>Beef Wellington</span>#}
+{#                                            <span class="text-primary">KSh 3,000</span>#}
+{#                                        </h5>#}
+{#                                        <small class="fst-italic">Classic beef tenderloin wrapped in puff pastry with#}
+{#                                            mushroom duxelles</small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
     <!-- Menu End -->
     <div class="container-xxl py-3 text-center">
         <div class="alert alert-warning mt-5" role="alert">
