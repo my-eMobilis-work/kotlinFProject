@@ -1,8 +1,7 @@
-{% extends 'basePage0.html' %}
+{% extends 'basePage.html' %}
 {% load static %}
 
 {% block body %}
-
     <div class="container-xxl position-relative p-0">
         <div class="container-xxl py-5 bg-dark hero-header imageAbout mb-5">
             <div class="container text-center my-5 pt-5 pb-4">
@@ -90,26 +89,29 @@
     <!-- About History Section Start -->
     <div class="container-xxl py-3 bg-light">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-4">A Glimpse into Our History</h1>
+            <div class="col-12">
+                <div class="border-top border-1 border-primary px-3 mb-5 mt-5 mx-auto"></div>
             </div>
-            <div class="row g-5 align-items-center">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1>A Glimpse into Our History</h1>
+            </div>
+            <div class="row g-5 mt-3 align-items-center">
                 <div class="col-lg-6">
                     <p class="lead mb-0">Twiga Resort was founded in 2018 with a vision to create a sanctuary that
-                        perfectly
-                        blends nature’s tranquility with modern luxury. Starting as a small family-owned establishment
-                        by the lakeside,
-                        the resort quickly became known for its warm hospitality, breathtaking views, and exceptional
-                        culinary offerings.
-                        Our dedication to providing exceptional experiences has allowed us to grow into a well-loved
-                        getaway for visitors
-                        from all over the world.</p>
+                        perfectly blends nature’s tranquility with modern luxury.
+                        <br>Starting as a small family-owned establishment by the lakeside, the resort quickly became
+                        known for its warm hospitality, breathtaking views, and exceptional culinary offerings.
+                        <br>Our dedication to providing exceptional experiences has allowed us to grow into a well-loved
+                        getaway for visitors from all over the world.</p>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                    <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.2s"
+                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="overflow: hidden;">
+                    <img class="w-75 wow zoomIn" data-wow-delay="0.2s"
                          src="{% static 'assets/img/about/about_hist.jpg' %}" alt="about-image history"
-                         style="aspect-ratio: 4/3; object-fit: cover;">
+                         style="aspect-ratio: 4/3; object-fit: cover; border-radius: 0.25rem;">
                 </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="border-top border-1 border-primary px-3 mb-5 mt-5 mx-auto"></div>
             </div>
         </div>
     </div>

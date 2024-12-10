@@ -9,7 +9,7 @@ from requests.auth import HTTPBasicAuth
 class MpesaC2bCredential:
     consumer_key = config('CONSUMER_KEY')
     consumer_secret = config('CONSUMER_SECRET')
-    api_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
+    api_URL = config('API_URL')
 
 
 class MpesaAccessToken:

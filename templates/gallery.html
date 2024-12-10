@@ -1,4 +1,4 @@
-{% extends 'basePage0.html' %}
+{% extends 'basePage.html' %}
 {% load static %}
 
 {% block body %}
@@ -16,120 +16,131 @@
         </div>
     </div>
 
-    <div class="container-xxl mx-3">
-    <div class="container mx-0 my-4">
-        <div class="d-flex align-items-center">
-            <i class="fa fa-3x fa-camera-retro text-primary mb-4"></i>
-            <h2 class="text-center text-primary ms-3">Share Your Experience</h2>
-        </div>
-        <p class="mb-5">At Twiga Resort, we invite you to capture the beauty of your stay. Share your
-            stunning photos with us and let the world see the magic of Twiga Resort. Your photos might even be featured
-            in our gallery!</p>
-    </div>
-    <div class="gallery_upload_container">
-        <h2>Upload an image</h2>
-
-        <form method="post" enctype="multipart/form-data" class="text-center d-block m-auto mb-4">
-            {% csrf_token %}
-
-            <button class="btn btn-custom" type="submit">Upload</button>
-        </form>
-    </div>
-
-    <div class="container-xxl py-5">
+    <div class="container-xxl pt-0 pb-3">
         <div class="container mx-0 my-4">
             <div class="d-flex align-items-center">
-                <i class="fa fa-3x fa-images text-primary mb-4"></i>
-                <h2 class="text-primary ms-3">Twiga Gallery</h2>
+                <i class="fa fa-3x fa-camera-retro text-primary mb-4"></i>
+                <h2 class="text-center text-primary ms-3">Share Your Experience</h2>
             </div>
-            <p>Explore the beauty of Twiga Resort through our gallery! We encourage you to capture your moments and
-                share the magic of your stay with us. Discover some of the amazing pictures taken by our guests and our
-                team
-                right here.
-            </p>
+            <p class="mb-5">At Twiga Resort, we invite you to capture the beauty of your stay. Share your
+                stunning photos with us and let the world see the magic of Twiga Resort. Your photos might even be
+                featured in our gallery!</p>
+        </div>
+        <div class="gallery_upload_container">
+            <h2>Upload an image</h2>
+            <form method="POST" enctype="multipart/form-data" action="{% url 'upload_image' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" name="image" id="gallery_upload_image_input" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" class="form-control" required>
+                </div>
+                {% if form.title.errors %}
+                    <div class="col-12">
+                        <div class="alert alert-danger text-danger alert-dismissible fade show" role="alert">
+                            <strong><i class="bi bi-exclamation-triangle-fill"></i> Error!</strong>
+                            Title cannot be more than 100 characters.
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="form-group">
+                    <label for="description">Description (Optional):</label>
+                    <textarea name="description" id="description" class="form-control"></textarea>
+                </div>
+                {% if form.description.errors %}
+                    <div class="col-12">
+                        <div class="alert alert-danger text-danger alert-dismissible fade show" role="alert">
+                            {% for error in form.description.errors %}
+                                <strong><i class="bi bi-exclamation-triangle-fill"></i> Error!</strong>
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                <button class="btn-custom" type="submit">Upload</button>
+            </form>
         </div>
 
+        <div class="container-xxl py-5" id="twiga_gallery" style="scroll-margin-top: 70px;">
+            <div class="container mx-0 my-4">
+                <div class="d-flex align-items-center">
+                    <i class="fa fa-3x fa-images text-primary mb-4"></i>
+                    <h2 class="text-primary ms-3">Twiga Gallery</h2>
+                </div>
+                <p>Explore the beauty of Twiga Resort through our gallery! We encourage you to capture your moments and
+                    share the magic of your stay with us. Discover some of the amazing pictures taken by our guests and
+                    our team right here.
+                </p>
+            </div>
+            <div class="row gallery g-4">
+                {% for image in images %}
+                    <div class="col-md-4">
+                        <div class="gallery-item">
+                            <img src="{{ image.image.url }}" alt="User Uploaded Image">
+                            <div class="image-title">{{ image.title|capfirst }}</div>
+                            <div class="button-container">
+                                <a href="/image_delete/{{ image.id }}" class="btn btn-outline-danger">DELETE</a>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+                        <p class="description ms-1 mt-2 mb-0 text-dark">{{ image.description|default:"No image description provided." }}</p>
+                    </div>
+                {% endfor %}
 
-        <!-- Row for the image grid with gallery class -->
-        <div class="row gallery g-4">
-            <!-- Column for the first image -->
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g0.jpg' %}" alt="Gallery Image 1">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="{% static 'assets/img/gallery/g0.jpg' %}" alt="Gallery image vibes">
+                        <div class="image-title">Evening Vibes</div>
+                        <div class="overlay"></div>
+                    </div>
+                    <p class="ms-1 mt-2 mb-0 text-dark">The perfect time to soak in the view.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="{% static 'assets/img/gallery/g1.jpg' %}" alt="Gallery image cheese">
+                        <div class="image-title">Cheeessseee!!!</div>
+                        <div class="overlay"></div>
+                    </div>
+                    <p class="ms-1 mt-2 mb-0 text-dark">Seriously, is there anything better?</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="{% static 'assets/img/gallery/g2.jpg' %}" alt="Gallery image table">
+                        <div class="image-title">Table Prep</div>
+                        <div class="overlay"></div>
+                    </div>
+                    <p class="ms-1 mt-2 mb-0 text-dark">Where all the best moments happen!</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="{% static 'assets/img/gallery/g3.jpg' %}" alt="Gallery image god-rays">
+                        <div class="image-title">God Rays...</div>
+                        <div class="overlay"></div>
+                    </div>
+                    <p class="ms-1 mt-2 mb-0 text-dark">Nature showing off, one beam at a time.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="{% static 'assets/img/gallery/g4.jpg' %}" alt="Gallery image cheese">
+                        <div class="image-title">The setup</div>
+                        <div class="overlay"></div>
+                    </div>
+                    <p class="ms-1 mt-2 mb-0 text-dark">No image description provided.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="{% static 'assets/img/gallery/g5.jpg' %}" alt="Uploaded Image">
+                        <div class="image-title">Grilled Meeaaat!!!</div>
+                        <div class="overlay"></div>
+                    </div>
+                    <p class="ms-1 mt-2 mb-0 text-dark">The sizzle, the aroma—pure happiness!</p>
                 </div>
             </div>
-
-            <!-- Column for the second image -->
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g1.jpg' %}" alt="Gallery Image 2">
-                </div>
-            </div>
-
-            <!-- Column for the third image -->
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g2.jpg' %}" alt="Gallery Image 3">
-                </div>
-            </div>
-
-            <!-- Repeat the above block for the rest of the images -->
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g3.jpg' %}" alt="Gallery Image 4">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g4.jpg' %}" alt="Gallery Image 5">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g5.jpg' %}" alt="Gallery Image 6">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g6.jpg' %}" alt="Gallery Image 7">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g7.jpg' %}" alt="Gallery Image 8">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g8.jpg' %}" alt="Gallery Image 9">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g9.jpg' %}" alt="Gallery Image 10">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g10.jpg' %}" alt="Gallery Image 11">
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gallery-item">
-                    <img src="{% static 'assets/img/gallery/g11.jpg' %}" alt="Gallery Image 12">
-                </div>
-            </div>
-
         </div>
-    </div>
     </div>
 
 

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Twiga Login</title>
+    <title>Twiga Management Login</title>
 
     {% load static %}
     <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
@@ -17,23 +17,25 @@
 <body>
 
 <section class="gradient-bg gradient-bg-login">
-    <div class="container">
-        <div class="row gy-4 align-items-center">
-            <div class="col-12 col-md-6 col-xl-7">
-                <div class="d-flex justify-content-center text-bg-primary">
-                    <div class="col-12 col-xl-9">
-                        <img class="login_img" loading="lazy" src="{% static 'assets/img/twiga_logo_wide.svg' %}"
-                             alt="Twiga Logo">
-                        <hr class="border-primary-subtle mb-4">
-                        <h2 class="h1 mb-4 text-white">Welcome back to Twiga!</h2>
-                        <p class="lead text-white mb-5">We're thrilled to have you back.<br>Ready for another
-                            exceptional
-                            stay? Log in to continue your journey with us.<br>Your comfort and unforgettable moments
-                            await.</p>
 
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+                <hr class="border-primary-subtle mb-2 mt-3 custom-hr">
             </div>
+            <div class="col-auto">
+                <img class="login_img m-2 p-2" loading="lazy" src="{% static 'assets/img/twiga_logo_WOB.svg' %}"
+                     alt="Twiga Logo" style="max-height: 70px; object-fit: contain;">
+            </div>
+            <div class="col-auto">
+                <h2 class="m-2 p-2 text-white">Twiga Management.</h2>
+            </div>
+            <div class="col-12">
+                <hr class="border-primary-subtle mb-1 mt-2 custom-hr">
+            </div>
+        </div>
+
+        <div class="row gy-4 justify-content-center align-items-center">
             <div class="col-12 col-md-6 col-xl-5 my-5">
                 <div class="login_card">
                     <div class="card-body p-3 p-md-4 p-xl-5">
@@ -45,12 +47,12 @@
                                 </div>
                             </div>
                         </div>
-                        <form method="POST" action="{% url 'index' %}">
+                        <form method="POST" action="{% url 'manager_login' %}">
                             {% csrf_token %}
                             <div class="row gy-3 overflow-hidden">
                                 <div class="col-12">
-                                    <input type="text" class="form-control" name="username" value="{{ username }}" id="username" required>
-                                    <label for="username" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="manager_name" value="{{ manager_name }}" id="manager_name" required>
+                                    <label for="manager_name" class="form-label">Name</label>
                                 </div>
                                 <div class="col-12">
                                     <input type="password" class="form-control" name="password" id="password"
@@ -77,11 +79,13 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-center mt-4">
-                                    <p>Don't have an account? <a class="links" href="{% url 'register' %}">Sign up</a>
+                                    <p>To register a new manager, please contact us at <a
+                                            href="tel:+254 712 345 678" class="links"><strong>+254 712 345 678</strong></a>
                                     </p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -89,6 +93,7 @@
     </div>
 </section>
 
+<script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 </html>
 

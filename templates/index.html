@@ -1,4 +1,4 @@
-{% extends 'basePage0.html' %}
+{% extends 'basePage.html' %}
 {% load static %}
 
 {% block body %}
@@ -505,6 +505,7 @@
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Online Reservation</h5>
                     <h1 class="text-white mb-4">Book A Table</h1>
                     <form>
+                    {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+
+    <title>Twiga Dashboard</title>
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/ti-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/typicons/typicons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/simple-line-icons/css/simple-line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css' %}">
+    <!-- endinject -->
+
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{% static 'assets/js/dashboard/select.dataTables.min.css' %}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'assets/css/dashboard/vertical-layout-light/style.css' %}">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}"/>
+</head>
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row shadow-sm border-bottom">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+            <div class="me-3">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand brand-logo d-flex align-items-start" href="{% url 'dashboard' %}">
+                    <img src="{% static 'assets/img/twiga_dashboard.svg' %}" alt="logo"
+                         style="width: 100%; height: auto;"/>
+                </a>
+                <a class="navbar-brand brand-logo-mini" href="{% url 'dashboard' %}">
+                </a>
+            </div>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-top">
+            <ul class="navbar-nav">
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                    <h1 class="welcome-text">
+                        <span id="greeting-text"></span>,
+                        <span class="text-black fw-bold">{{ manager.manager_name|capfirst }}</span></h1>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item d-none d-lg-block">
+                    <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+                      <span class="input-group-addon input-group-prepend border-right">
+                        <span class="icon-calendar input-group-text calendar-icon"></span>
+                      </span>
+                      <input type="text" class="form-control">
+                    </div>
+                </li>
+                <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                    <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="img-xs rounded-circle" src="
+                                {% if manager.image %}{{ manager.image.url }}{% else %}{% static 'assets/img/testimonial/t6.png' %}{% endif %}"
+                             alt="Profile image"> </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                        <div class="dropdown-header text-center">
+                            <p class="mb-2 mt-3 fw-bold">{{ manager.manager_name|capfirst }}</p>
+                            <p class="fw-light text-start ms-1 mb-1"><strong>Phone: </strong>{{ manager.phone }}</p>
+                            <p class="fw-light text-start ms-1 mb-1 {% if not manager.email %}text-danger{% endif %}">
+                                <strong>Email: </strong>{{ manager.email|default:"No Email Provided" }}</p>
+                        </div>
+                        <a class="dropdown-item" href="{% url 'managers' %}"><i
+                                class="dropdown-item-icon mdi mdi-account-outline text-primary ms-0 me-2"></i> My
+                            Profile</a>
+                        <a class="dropdown-item" href="{% url 'manager_logout' %}"><i
+                                class="dropdown-item-icon mdi mdi-logout text-primary ms-0 me-2"></i>Logout</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-bs-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item nav-category">Home</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dashboard' %}">
+                        <i class="mdi mdi-grid-large menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-category">Users</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users' %}">
+                        <i class="menu-icon mdi mdi-account-circle-outline"></i>
+                        <span class="menu-title">Twiga Users</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'managers' %}">
+                        <i class="menu-icon mdi mdi-account-circle-outline"></i>
+                        <span class="menu-title">Twiga Managers</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-category">Help</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'documentation' %}">
+                        <i class="menu-icon mdi mdi-file-document"></i>
+                        <span class="menu-title">Documentation</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">
+                        <i class="menu-icon mdi mdi-home"></i>
+                        <span class="menu-title">Go to site</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="home-tab">
+
+                            {% block body %}
+
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-end">
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Twiga Resort Copyright © 2024. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+<script src="{% static 'assets/vendors/chart.js/Chart.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'assets/vendors/progressbar.js/progressbar.min.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/off-canvas.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/hoverable-collapse.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/template.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/settings.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/todolist.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/dashboard.js' %}"></script>
+<script src="{% static 'assets/js/dashboard/Chart.roundedBarCharts.js' %}"></script>
+</body>
+
+</html>
+
