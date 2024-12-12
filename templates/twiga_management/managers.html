@@ -52,8 +52,8 @@
                                         <h6 class="{% if not manager.email %}text-danger{% endif %}">{{ manager.email|default:"No Email" }}</h6>
                                     </td>
                                     <td>
-                                        <div class="d-flex">
-                                            <div class="me-2 d-flex align-items-center">
+                                        <div class="d-flex" >
+                                            <div class="me-3 d-flex align-items-center">
                                                 {% if manager.image %}
                                                     <img src="{{ manager.image.url }}" alt="Manager Profile Image"
                                                          class="img-fluid rounded-circle"
@@ -62,54 +62,30 @@
                                                     <h6 class="text-danger">No profile image</h6>
                                                 {% endif %}
                                             </div>
-
                                             {% if request.session.manager_id == manager.id and manager.image %}
-                                                <div class="d-flex flex-column align-items-center justify-content-center">
-                                                    <ul class="m-0 list-unstyled">
-                                                        <li>
-                                                            <button class="btn btn-outline-warning dropdown-toggle w-100"
-                                                                    type="button"
-                                                                    id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                                                    aria-expanded="false"
-                                                                    style="width: 100%; text-align: center;">
-                                                                Edit Image
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                                                                 aria-labelledby="dropdownMenuButton">
-                                                                <form method="POST" enctype="multipart/form-data"
-                                                                      action="{% url 'mgr_edit_image' manager.id %}">
-                                                                    {% csrf_token %}
-                                                                    <div class="d-flex flex-column align-items-center">
-                                                                        <input type="file" name="image"
-                                                                               class="form-control mb-3"
-                                                                               id="custom_image_upload_input"
-                                                                               style="width: 95%;">
-                                                                        <button type="submit"
-                                                                                class="btn btn-outline-success m-0"
-                                                                                style="width: 70%; text-align: center;">
-                                                                            Save Image
-                                                                        </button>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="{% url 'mgr_delete_image' manager.id %}"
-                                                               class="btn btn-outline-danger" style="width: 100%;">Delete</a>
-                                                        </li>
-                                                    </ul>
-
+                                                <div class="d-flex flex-column align-items-center justify-content-center" style="min-width: 55px;">
+                                                    <a href="{% url 'mgr_delete_image' manager.id %}"
+                                                       class="btn btn-outline-danger" style="width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">Delete Image</a>
                                                 </div>
                                             {% endif %}
                                         </div>
-
                                     </td>
                                     <td class="text-wrap">
-                                        <h6>{{ manager.dateJoined }}</h6>
+                                        <h6>{{ manager.dateJoined|date:"Y-m-d" }}<br>{{ manager.dateJoined|time:"h:i A" }}
+                                        </h6>
                                     </td>
                                     <td>
-                                        <a href="/manager_delete/{{ manager.id }}"
-                                           class="btn btn-outline-danger">DELETE</a>
+                                        <div class="d-flex flex-column align-items-center justify-content-center">
+                                            {% if request.session.manager_id == manager.id %}
+                                                <button type="button" class="btn btn-outline-warning w-100"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    Edit
+                                                </button>
+                                            {% endif %}
+                                            <a href="/manager_delete/{{ manager.id }}"
+                                               class="btn btn-outline-danger w-100">DELETE</a>
+                                        </div>
                                     </td>
                                 </tr>
                                 {% if request.session.manager_id == manager.id %}
@@ -123,7 +99,7 @@
                                 {% endif %}
                             {% empty %}
                                 <tr>
-                                    <td colspan="5" class="text-center text-black fw-semibold">
+                                    <td colspan="6" class="text-center text-black fw-semibold">
                                         No managers registered to Twiga yet.
                                     </td>
                                 </tr>
@@ -136,5 +112,70 @@
         </div>
     </div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Manager Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form method="POST" action="/manager_update/{{ manager.id }}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="password" value="{{ manager.password }}">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" value="{{ manager.manager_name }}"
+                                           id="manager_name"
+                                           name="manager_name" placeholder="Your Name" required>
+                                    <label for="manager_name">Your Name *</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" value="{{ manager.phone }}" id="phone"
+                                           name="phone" placeholder="Your Phone" required>
+                                    <label for="phone">Your Phone *</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" value="{{ manager.email|default:'' }}"
+                                           id="email"
+                                           name="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+
+                            <!-- Image Preview, Upload, and Delete -->
+                            <div class="col-12">
+                                <div class="form-floating mb-2">
+                                    <input type="file" name="image" class="form-control" id="image">
+                                    <label for="image">Upload New Image</label>
+                                </div>
+                                {#                                <a href="{% url 'mgr_delete_image' manager.id %}" class="btn btn-outline-danger w-100">Delete#}
+                                {#                                    Image</a>#}
+                            </div>
+
+                            <!-- Submit Buttons -->
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

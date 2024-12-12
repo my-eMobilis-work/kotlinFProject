@@ -1,11 +1,16 @@
 from django import forms
-from twigaapp.models import Bookings, ImageModels
+from twigaapp.models import Bookings, ImageModels, Managers
 from django.core.exceptions import ValidationError
 
 
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Bookings
+        fields = '__all__'
+
+class ManagersForm(forms.ModelForm):
+    class Meta:
+        model = Managers
         fields = '__all__'
 
 

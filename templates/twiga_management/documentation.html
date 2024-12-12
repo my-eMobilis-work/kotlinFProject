@@ -3,6 +3,59 @@
 
 {% block body %}
 
+<div class="row flex-grow">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card card-rounded shadow border border-1">
+            <div class="card-body">
+                <div class="d-sm-flex justify-content-between align-items-start">
+                    <div>
+                        <h2 class="card-title card-title-dash">Documentation</h2>
+                    </div>
+                </div>
+                <div class="table-responsive mt-3">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-dark fw-semibold">Section</th>
+                                <th class="text-dark fw-semibold">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="h6">Dashboard Overview</td>
+                                <td>Provides a summary of today's bookings and activities, showing booked activities for the day.</td>
+                            </tr>
+                            <tr>
+                                <td class="h6">Contact Summary</td>
+                                <td>Displays an overview of total contacts submitted, with breakdowns for messages submitted.</td>
+                            </tr>
+                            <tr>
+                                <td class="h6">Booking Summary</td>
+                                <td>Shows total number of bookings, types of bookings, special requests, and Mpesa request status.</td>
+                            </tr>
+                            <tr>
+                                <td class="h6">Submitted Contacts</td>
+                                <td>Lists all user-submitted contact information, including names, phone numbers, subjects, and messages. Allows deletion of contact records.</td>
+                            </tr>
+                            <tr>
+                                <td class="h6">Bookings</td>
+                                <td>Displays detailed information for each booking, including type, name, contact info, special requests, and Mpesa request status. Allows deletion of booking records.</td>
+                            </tr>
+                            <tr>
+                                <td class="h6">Mpesa Requests</td>
+                                <td>Breaks down Mpesa requests into sent and not sent, highlighting bookings with associated Mpesa transactions.</td>
+                            </tr>
+                            <tr>
+                                <td class="h6">Special Requests</td>
+                                <td>Lists any special requests made by users during the booking process, ensuring clarity on specific needs or accommodations.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}

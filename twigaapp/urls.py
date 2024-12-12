@@ -22,6 +22,7 @@ urlpatterns = [
     path('bookings/', views.bookings, name='bookings'),
     path('booking_delete/<int:id>', views.booking_delete),
     path('managers/', views.managers, name='managers'),
+    path('manager_update/<int:id>', views.manager_update),
     path('manager_delete/<int:id>', views.manager_delete),
     path('manager_login/', views.manager_login, name='manager_login'),
     path('manager_register/', views.manager_register, name='manager_register'),
@@ -36,7 +37,6 @@ urlpatterns = [
 
 
 
-    path('pay/', views.pay, name='pay'),
     path('stk/', views.stk, name='stk'),
     path('token/', views.token, name='token'),
 

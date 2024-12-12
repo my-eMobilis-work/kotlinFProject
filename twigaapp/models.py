@@ -37,14 +37,14 @@ class Contacts(models.Model):
 
 class Bookings(models.Model):
     type = models.CharField(max_length=20)
-    paid = models.BooleanField(default=False)
-    name = models.CharField(max_length=25)
-    phone = models.CharField(max_length=10)
+    mpesaRequestSent = models.BooleanField(default=False)
+    name = models.CharField(max_length=70)
+    phone = models.CharField(max_length=15)
     email = models.EmailField(null=True, blank=True)
-    dateTime = models.DateTimeField()
-    persons = models.IntegerField()
+    dateBooked = models.DateTimeField()
+    persons = models.CharField(max_length=5)
     specialRequest = models.TextField(null=True, blank=True)
-    booking_time = models.DateTimeField(auto_now_add=True)
+    dateCreated = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
