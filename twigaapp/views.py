@@ -283,7 +283,7 @@ def dashboard(request):
     mpesa_sent_count = all_bookings.filter(mpesaRequestSent=True).count()
     mpesa_not_sent_count = total_bookings - mpesa_sent_count
     today = timezone.now().date()
-    today_bookings = all_bookings.filter(  Q(dateBooked__date=today) )
+    today_bookings = all_bookings.filter( Q(dateBooked__date=today) )
     today_bookings_count = today_bookings.count()
 
     all_contacts = Contacts.objects.all().order_by('-id')
