@@ -3,19 +3,6 @@
 
 {% block body %}
 
-    <div class="container-xxl position-relative p-0">
-        <div class="container-xxl py-5 bg-dark hero-header mb-5">
-            <div class="container text-center my-5 pt-5 pb-4">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center text-uppercase">
-                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div>
 
     <!-- Accordion section start -->
     <section class="hero-section">
@@ -130,120 +117,257 @@
     </section>
     <!-- Accordion section end -->
 
+    <div class="container-xxl position-relative p-0">
+        <div class="container-xxl py-5 bg-dark hero-header imageServices mb-5">
+            <div class="container text-center my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-4">
 
+            <!-- Outdoor Experiences -->
+            <div class="my-3 row align-items-center">
+                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="overflow: hidden;">
+                    <img class="w-75 wow zoomIn" data-wow-delay="0.2s"
+                         src="{% static 'assets/img/services/outdoor.jpg' %}" alt="outdoor image"
+                         style="aspect-ratio: 4/3; object-fit: cover; border-radius: 0.25rem;">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2>Outdoor Experiences</h2>
+                    <p>Explore the beauty of nature with our wide range of outdoor activities. From serene lakeside
+                        dining to exciting water sports, we offer unforgettable experiences for those seeking both
+                        relaxation and adventure. Whether you prefer a peaceful retreat or an adrenaline rush, our
+                        outdoor offerings are designed to cater to every interest and preference.</p>
+                </div>
+            </div>
+            <div class="row g-4">
                 <!-- Lakeside Dining -->
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
                             <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
                             <h5>Lakeside Dining</h5>
-                            <p>Savor world-class cuisine while enjoying the serene beauty and atmosphere of the
-                                lake.</p>
+                            <p>Indulge in exquisite culinary creations while enjoying breathtaking views of the serene
+                                lake. Perfect for a romantic evening or a special celebration, our lakeside dining
+                                experience promises both world-class cuisine and unmatched ambiance.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Garden & Outdoor Spaces -->
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
                             <i class="fa fa-3x fa-tree text-primary mb-4"></i>
                             <h5>Garden & Outdoor Spaces</h5>
-                            <p>Relax in our manicured gardens or enjoy outdoor activities with a picturesque view.</p>
+                            <p>Relax and unwind in our beautifully manicured gardens, designed to provide a peaceful
+                                atmosphere surrounded by nature. Perfect for a leisurely walk or enjoying outdoor
+                                activities with stunning views.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Luxurious Accommodations -->
+                <!-- Fishing Adventures -->
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
-                            <i class="fa fa-3x fa-bed text-primary mb-4"></i>
-                            <h5>Luxurious Accommodations</h5>
-                            <p>Experience ultimate comfort in our elegant, lakeside rooms with breathtaking views.</p>
+                            <i class="fa fa-3x fa-fish text-primary mb-4"></i>
+                            <h5>Fishing Adventures</h5>
+                            <p>Whether you're an experienced angler or a novice, our fishing adventures provide the
+                                perfect opportunity to enjoy the peace of the water while seeking out the perfect catch.
+                                Join us for guided tours or fish independently in pristine surroundings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Family-Friendly Fun -->
+            <div class="my-3 row align-items-center">
+                <div class="col-12 mt-5">
+                    <div class="border-top border-1 border-primary px-3 mb-5 mt-5 mx-auto"></div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2>Family-Friendly Fun</h2>
+                    <p>Our family-oriented experiences are designed to create lasting memories for all ages. From
+                        kid-friendly spaces to pet-inclusive areas, our offerings ensure that everyone in your family
+                        has something to enjoy. Whether it's a fun day at the lake or a relaxing evening under the
+                        stars, our family-friendly services cater to every need.</p>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="overflow: hidden;">
+                    <img class="w-75 wow zoomIn" data-wow-delay="0.2s"
+                         src="{% static 'assets/img/services/family_friendly.jpg' %}" alt="family_friendly image"
+                         style="aspect-ratio: 4/3; object-fit: cover; border-radius: 0.25rem;">
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Kid & Pet-Friendly Spaces -->
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
+                         style="min-height: 310px;">
+                        <div class="p-4 text-center">
+                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
+                            <h5>Kid & Pet-Friendly Spaces</h5>
+                            <p>We understand that family includes everyone, so our kid and pet-friendly spaces ensure
+                                your little ones and four-legged friends are welcome. These safe environments
+                                are perfect for families to relax and enjoy quality time together.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Personalized Concierge -->
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
                             <i class="fa fa-3x fa-user text-primary mb-4"></i>
                             <h5>Personalized Concierge</h5>
-                            <p>Our team is here to make your stay perfect with tailored recommendations and
-                                services.</p>
+                            <p>Our personalized concierge service is here to ensure that your family’s stay is perfectly
+                                tailored. From booking family activities to arranging pet care, we handle the details so
+                                you can focus on creating cherished memories.</p>
                         </div>
                     </div>
                 </div>
-
                 <!-- Boat & Ski Rides -->
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
                             <i class="fa fa-3x fa-ship text-primary mb-4"></i>
                             <h5>Boat & Ski Rides</h5>
-                            <p>Explore the lake with thrilling boat and ski rides for all ages.</p>
+                            <p>From thrilling boat rides to exciting water skiing, our lake activities cater to families
+                                looking for fun and adventure. Suitable for all ages, these activities offer a chance to
+                                bond while enjoying the stunning views and fresh air.</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Drinks Galore -->
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="1.1s">
+            <!-- Luxury Redefined -->
+            <div class="my-3 row align-items-center">
+                <div class="col-12 mt-5">
+                    <div class="border-top border-1 border-primary px-3 mb-5 mt-5 mx-auto"></div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="overflow: hidden;">
+                    <img class="w-75 wow zoomIn" data-wow-delay="0.2s"
+                         src="{% static 'assets/img/services/luxury_redefined.jpg' %}" alt="luxury_redefined image"
+                         style="aspect-ratio: 4/3; object-fit: cover; border-radius: 0.25rem;">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2>Luxury Redefined</h2>
+                    <p>Experience a new level of luxury, where elegance meets comfort in every aspect of your stay. From
+                        lavish accommodations to exceptional dining and tailored services, our offerings ensure that
+                        every detail of your experience is designed to exceed expectations.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Luxurious Accommodations -->
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
+                        <div class="p-4 text-center">
+                            <i class="fa fa-3x fa-bed text-primary mb-4"></i>
+                            <h5>Luxurious Accommodations</h5>
+                            <p>Retreat to your private lakeside sanctuary, our rooms feature breathtaking views, plush furnishings,
+                                and top-tier amenities, ensuring your stay is nothing short of exceptional.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drinks Galore -->
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
                             <i class="fa fa-3x fa-cocktail text-primary mb-4"></i>
                             <h5>Drinks Galore</h5>
-                            <p>From craft cocktails to fine wines and everything in between—find your favorite drink
-                                here.</p>
+                            <p>Indulge in an extensive collection of fine wines, craft cocktails, and other specialty
+                                beverages. Our bar offers a sophisticated selection designed to satisfy even the most
+                                discerning palates.</p>
                         </div>
                     </div>
                 </div>
-
                 <!-- Conference Rooms -->
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="1.3s">
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
+                         style="min-height: 310px;">
                         <div class="p-4 text-center">
                             <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
                             <h5>Conference Rooms</h5>
-                            <p>Host professional meetings in our fully-equipped, spacious conference rooms.</p>
+                            <p>Our conference rooms are designed to provide a professional and
+                                comfortable setting for meetings and conferences.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Fishing Adventures -->
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="1.5s">
-                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
-                        <div class="p-4 text-center">
-                            <i class="fa fa-3x fa-fish text-primary mb-4"></i>
-                            <h5>Fishing Adventures</h5>
-                            <p>Enjoy the tranquility of fishing with our guided or independent options.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kid & Pet-Friendly Spaces -->
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="1.7s">
-                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
-                         style="min-height: 270px;">
-                        <div class="p-4 text-center">
-                            <i class="fa fa-3x fa-child text-primary mb-4"></i>
-                            <h5>Kid & Pet-Friendly Spaces</h5>
-                            <p>A safe, welcoming environment for your family—including your four-legged friends.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Event Planning -->
+            <div class="my-3 row align-items-center">
+                <div class="col-12 mt-5">
+                    <div class="border-top border-1 border-primary px-3 mb-5 mt-5 mx-auto"></div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2>Event Planning</h2>
+                    <p>Let us take the stress out of your event planning. Our expert team will assist in organizing
+                        every detail, ensuring your event is seamlessly executed from start to finish. Whether you are
+                        hosting a wedding, corporate meeting, or private celebration, we'll make your special occasion unforgettable.</p>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="overflow: hidden;">
+                    <img class="w-75 wow zoomIn" data-wow-delay="0.2s"
+                         src="{% static 'assets/img/services/event.jpg' %}" alt="event image"
+                         style="aspect-ratio: 4/3; object-fit: cover; border-radius: 0.25rem;">
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Celebration Planning -->
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
+                         style="min-height: 310px;">
+                        <div class="p-4 text-center">
+                            <i class="fa fa-3x fa-heart text-primary mb-4"></i>
+                            <h5>Celebration Planning</h5>
+                            <p>From birthdays to anniversaries and everything in between, our team will ensure that
+                                every aspect of your celebration is perfectly planned with personalized touches and
+                                attention to detail.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wedding Planning -->
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
+                         style="min-height: 310px;">
+                        <div class="p-4 text-center">
+                            <i class="fa fa-3x fa-gift text-primary mb-4"></i>
+                            <h5>Wedding Planning</h5>
+                            <p>Let us help you create the wedding of your dreams. From the ceremony to the reception,
+                                our team will assist you with every detail, ensuring your special day is flawless and
+                                filled with love and joy.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Corporate Event Planning -->
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded-5 shadow-lg pt-3 d-flex flex-column align-items-center justify-content-center"
+                         style="min-height: 310px;">
+                        <div class="p-4 text-center">
+                            <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
+                            <h5>Corporate Event Planning</h5>
+                            <p>We'll provide everything you need to host successful
+                                business events, from meetings to conferences to team-building activities ensuring
+                                that your event reflects your brand and delivers an impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Service End -->
@@ -264,18 +388,18 @@
 
 
 
-            <div class="row flex-grow">
-                <div class="col-12 grid-margin stretch-card">
-                    <div class="card card-rounded shadow border border-1">
-                        <div class="card-body">
-                            <div class="d-sm-flex justify-content-between align-items-start">
-                                <div>
-                                    <h2 class="card-title card-title-dash">Documentation</h2>
-                                </div>
-                            </div>
-                            <div class="table-responsive mt-3">
-                            </div>
-                        </div>
+<div class="row flex-grow">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card card-rounded shadow border border-1">
+            <div class="card-body">
+                <div class="d-sm-flex justify-content-between align-items-start">
+                    <div>
+                        <h2 class="card-title card-title-dash">Documentation</h2>
                     </div>
                 </div>
+                <div class="table-responsive mt-3">
+                </div>
             </div>
+        </div>
+    </div>
+</div>

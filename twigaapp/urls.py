@@ -35,7 +35,7 @@ urlpatterns = [
     path('image_delete/<int:id>', views.image_delete),
     path('upload_image/', views.upload_image, name='upload_image'),
 
-
+    path('test/', views.test, name='test'),
 
     path('stk/', views.stk, name='stk'),
     path('token/', views.token, name='token'),

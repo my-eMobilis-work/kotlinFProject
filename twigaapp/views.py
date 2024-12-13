@@ -1,5 +1,5 @@
-import json
 import os
+import json
 import logging
 import requests
 from decouple import config
@@ -14,6 +14,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.hashers import make_password, check_password
 from twigaapp.credentials import MpesaAccessToken, LipanaMpesaPassword
 from twigaapp.models import Contacts, Bookings, ImageModels, Users, Managers
+
 
 
 def index(request):
@@ -63,8 +64,6 @@ def login(request):
     return render(request, 'login.html')
 
 
-# TODO this uses the full page animation with 4 sliders from TULEN we saw?
-#  Or keep the default
 def services(request):
     return render(request, 'services.html')
 
@@ -74,7 +73,6 @@ def bookings(request):
         phone = request.POST['phone']
         amount = request.POST['amount']
         mpesa_status = stk(phone, amount)
-
         new_booking = Bookings(
             type=request.POST['type'],
             mpesaRequestSent=mpesa_status,
@@ -89,8 +87,7 @@ def bookings(request):
         if mpesa_status:
             messages.success(request, 'Your booking has been sent successfully! Mpesa request sent successfully!')
         else:
-            messages.warning(request,
-                             'Your booking has been sent successfully, but Mpesa request failed. Please try again later.')
+            messages.warning(request, 'Your booking has been sent successfully, but Mpesa request failed. Please try again later.')
         return redirect('/bookings#booking_tabs')
     return render(request, "bookings.html")
 
@@ -219,67 +216,6 @@ def mgr_delete_image(request, manager_id):
     manager.image = None
     manager.save()
     return redirect('managers')
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def appointment(request):
-#     if request.method == 'POST':
-#         my_appointment = Appointment(
-#             name=request.POST['name'],
-#             email=request.POST['email'],
-#             phone=request.POST['phone'],
-#             dateTime=request.POST['dateTime'],
-#             department=request.POST['department'],
-#             doctor=request.POST['doctor'],
-#             message=request.POST['message'],
-#         )
-#         my_appointment.save()
-#         return redirect('/show_appointments')
-#     else:
-#         return render(request, 'appointment.html')
-#
-# def show_appointments(request):
-#     all_appointments = Appointment.objects.all()
-#     return render(request, 'showAppointments.html', {'appointments': all_appointments})
-#
-# def edit_appointment(request, id):
-#     edit_appointment = Appointment.objects.get(id = id)
-#     return render(request, 'editAppointment.html', {'appointment': edit_appointment})
-#
-# def update_appointment(request, id):
-#     update_info = Appointment.objects.get(id = id)
-#     form = AppointmentForm(request.POST, instance=update_info)
-#     if form.is_valid():
-#         form.save()
-#         return redirect('/show_appointments')
-#     else:
-#         return render(request, 'editAppointment.html')
-#
-# def delete_appointment(request, id):
-#     appoint = Appointment.objects.get(id = id)
-#     appoint.delete()
-#     return redirect('/show_appointments')
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Dashboard Functions
@@ -486,3 +422,10 @@ def documentation(request):
     })
 
 
+
+
+
+
+
+def test(request):
+    return render(request, 'test.html')
